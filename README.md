@@ -44,7 +44,9 @@ Some common types of problems built on top of classification and regresion inclu
 
 ## Unsupervised learning
 
-It is called unsupervised learning if you only have input data (X) and no corresponding output variables. The goal for this algorithm is to model the underlying structure or distribution in the data in order to learn more **about** the data. Unlike supervised learning, there are no correct answers and there is no teacher for teaching the algorithm. The algorithm are left to their own devises to **discover** and **present** the interesting structure in the data. 
+> It is called unsupervised learning if you only have input data (X) and no corresponding output variables. 
+
+The goal for this algorithm is to model the underlying structure or distribution in the data in order to learn more **about** the data. Unlike supervised learning, there are no correct answers and there is no teacher for teaching the algorithm. The algorithm are left to their own devises to **discover** and **present** the interesting structure in the data. 
 
 ### Problems
 
@@ -62,5 +64,12 @@ Can be grouped into **clustering and association** problems:
 
 
 ## Semi-Supervised learning
+
+> Problems where you have a large amount of input data (X) and only some of the data is labeled (Y) are called semi-supervised learning problems.
+
+Therefore this kind of problems sit in between **supervised and unsupervised** learning. As an example, a folder is containing a bunch of photos and only a few of them are labeled but the majority is unlabeled. That means that many real world machine learning problems fall into this area because it can be **expensive** or **time-consuming** to label data. 
+
+It is semi-supervised learning because you can use **unsupervised** learning techniques to discover and learn the structure in the input variables and you can use **supervised** learning techniques to make the best guess predictions for unlabeled data. You then feed that data back into the supervised learning algorithm as training data to use the model for predictions on new unseen data.
+
 
 ## Reinforcement
