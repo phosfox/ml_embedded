@@ -3,6 +3,7 @@
 ## Seminar
 
 The goal for this course is to introduce a procedure of Machine Learning
+    
     - classification scheme on constrained devices 
     - preferably trained on the constrained device (If its not possible then train it on the notebook)
 
