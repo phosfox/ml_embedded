@@ -68,7 +68,9 @@ It is semi-supervised learning because you can use **unsupervised** learning tec
 
 ## Reinforcement learning
 
-> [Reinforcement learning](https://openai.com/blog/openai-gym-beta/) (RL) is the subfield of machine learning concerned with decision making and motor control. It studies how an agent can learn how to achieve goals in a complex, uncertain environment 
+> [Reinforcement learning](https://openai.com/blog/openai-gym-beta/) (RL) is the subfield of machine learning concerned with decision making and motor control. It studies how an agent can learn how to achieve goals in a complex, uncertain environment.
+
+In [reinforcement learning](https://deepsense.ai/what-is-reinforcement-learning-the-complete-guide/) an artificial intelligence faces a game-like situation. The computer employs trial and error to come up with a solution to the problem. To get the machine to do what the programmer wants, the artificial intelligence gets either rewards or penalties for the actions it performs. Its goal is to maximize the total reward. The designer sets the reward-policy and gives the model no hints or suggestions for how to solve this game. The model has to figure out by itself how to perform the task to maximize the reward. Therefore the model starts from totally random trials and finishes with sophisticated tactics. By repeatedly training the game, reinforcement learning is an effective way to hint machine's creativity.
 
 Reinforcement learning has two goals:
 
@@ -79,3 +81,14 @@ Reinforcement learning has two downsides:
 
 - **Needs better benchmarks**: The equivalent for datasets in reinforcement learning are environments. Existing open-source environments do not have enough variety, are often difficult to set up and to use.
 - **Lack of standardization of environments used in publications**: Subtle differences in the problem definition can **drastically** alter a task's difficulty. This makes it difficult to reproduce published research and to compare results from different papers.
+
+### Challenges
+
+The main challenge in reinforcement learning is to **prepare** the simulation environment. It is hard to set up an environment for a car to learn how to drive on it's own. 
+
+You can only communicate with the system through rewards and penalties. This can cause to [catastrophic forgetting](https://deepsense.ai/wp-content/uploads/2018/07/1802.07239.pdf), where acquiring new knowledge causes some of the old to be erased from the network.
+
+Another challenge is to reach a local optimum. This means that an agent performs the task but not in the optimal or required way. 
+
+It is also worth mentioning that there are agents that will optimize the prize **without performing** the task it was designed for. 
+
