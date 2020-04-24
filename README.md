@@ -71,5 +71,6 @@ Therefore this kind of problems sit in between **supervised and unsupervised** l
 
 It is semi-supervised learning because you can use **unsupervised** learning techniques to discover and learn the structure in the input variables and you can use **supervised** learning techniques to make the best guess predictions for unlabeled data. You then feed that data back into the supervised learning algorithm as training data to use the model for predictions on new unseen data.
 
+[Semi-Supervised learning](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/)
 
 ## Reinforcement
