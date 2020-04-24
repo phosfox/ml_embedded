@@ -24,7 +24,7 @@ The goal of this method is to train the mapping function good enough that it can
 It is called **supervised** learning because the process of the algorithm learning from a training dataset can be seen as a teacher supervising the learning process.
 Because of the training dataset we know the correct answers (labeling), the algorithm makes predictions interatively on the training data and is corrected by the teacher if it was wrong.
 The learning process stops when the algorithm achieves an acceptable level of performance.
-[Supervised learning] (https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/)
+[Supervised learning](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/)
 
 ## Unsupervised learning
 
