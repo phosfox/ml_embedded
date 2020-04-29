@@ -20,6 +20,14 @@ ReLu stands for Rectified Linear Unit. It is an linear activation function that 
 ![ReLu](images/relu.png)
 
 # k-Means:
+[k-Mean](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a) is an iterative algorithm that tries to partition the dataset into distinct non-overlapping subgroups (clusters) where each data point belongs to **only one group**. 
+
+>It assigns data points to a cluster such that the sum of the squared distance between the data points and the cluster's centroid (arithmetic mean of all the data points that belong to that cluster) is at the minimum. The less variation we have within clusters, the more homogeneous (similar) the data points are within the same cluster.
+
+## How does it work?
+1. Specify number of clusters K.
+2. Initialize centroids by first shuffling the dataset and then randomly selecting K data points for the centroids without replacement.
+3. Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing. 
 
 # Nearest-Neighbours:
 
