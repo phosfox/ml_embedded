@@ -1,6 +1,7 @@
 # YOLO:
 You only look once
 # Hough-Transformation:
+The [Hough transformation](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) is a technique which can be used to isolate features of a particular shape within an image. Because it requires that the desired features be specified in some parametric form, the *classical* Hough transform is most commonly used for the detection of regular curves such as lines, circles, ellipses, etc. A *generalized* Hough transform can be employed in applications where a simple analytic description of a feature(s) is not possible.
 # HSV:
 # CNN:
 [CNN](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2) stands for Convolutional Neural Networks. It is a deep learning architecture for image related problems and has a very good accuracy. CNN is able to automatically detect the important features (distinctive features) without any human supervision. 
