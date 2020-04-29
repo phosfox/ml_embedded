@@ -29,7 +29,19 @@ ReLu stands for Rectified Linear Unit. It is an linear activation function that 
 2. Initialize centroids by first shuffling the dataset and then randomly selecting K data points for the centroids without replacement.
 3. Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing. 
 
+Then
+
+- Compute the sum of the squared distance between data points and all centroids.
+- Assign each data point to the closest cluster (centroid).
+- Compute the centroids for the clusters by taking the average of the all data points that belong to each cluster.
+
+
+
 # Nearest-Neighbours:
+The [k-nearest neighbours](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) algorithm is a simple and easy to implement supervised machine learning algorithm. It can be used to solve classification **and** regression problems.
+
+The KNN algorithm assumes that similar things occur in close proximity.
+![k-Nearest-Neighbours](images/kNN.png)
 
 # Google Tensorflow:
 
