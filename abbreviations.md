@@ -11,6 +11,7 @@ The [Hough transformation](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) i
 # R-CNN:
 [R-CNN](https://lilianweng.github.io/lil-log/2017/12/31/object-recognition-for-dummies-part-3.html) stands for Region-based Convolutional Neural Networks. [R-CNN try to solve the problem to locate objects in an image](https://towardsdatascience.com/r-cnn-3a9beddfd55a) (objekt detection). It does so by proposing regions of interest within the image. These regions are warped into a square and fed into a CNN. 
 # Mask R-CNN:
+> [Mask R-CNN](https://arxiv.org/pdf/1703.06870.pdf) is a conceptually simple, flexible, and general framework for object instance segmentation. It efficiently detects objects in an image while it simultaneously generates a high-quality segmentation mask for each instance. This methos extens *Faster R-CNN* by adding a branch for bounding box recognition.
 # ReLu:
 ReLu stands for Rectified Linear Unit. It is an linear activation function that will output the input directly if it is positive, otherwise it will output zero. It can we written as: `ReLu = max(0,input)`
 ![ReLu](images/relu.png)
