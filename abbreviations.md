@@ -16,6 +16,7 @@ The [Hough transformation](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) i
 ReLu stands for Rectified Linear Unit. It is an linear activation function that will output the input directly if it is positive, otherwise it will output zero. It can we written as: `ReLu = max(0,input)`
 ![ReLu](images/relu.png)
 # k-Means:
+[k-Mean](https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a) is an iterative algorithm that tries to partition the dataset into distinct non-overlapping subgroups (clusters) where each data point belongs to **only one group**.  
 # Nearest-Neighbours:
 # Google Tensorflow:
 Tensorflow is an open source library for dataflow and differentiable programming. It is monstly used for machine learning applications.
