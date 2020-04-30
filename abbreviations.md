@@ -88,9 +88,15 @@ A [perceptron](http://neuralnetworksanddeeplearning.com/chap1.html#complete_zero
 
 ![perceptron](images/perceptron.png)
 
-In the example shown a perceptron can have multiple inputs and one output. To compute the output, each input can have an importance in form of **weights**. The perceptron can only have an output of 0 or 1 which is determined by wether the sum *∑j wj * xj* is less or greater than some **threshold value**. This threshold is called bias. 
+In the example shown a perceptron can have multiple inputs and one output. To compute the output, each input can have an importance in form of **weights**. The perceptron can only have an output of 0 or 1 which is determined by wether the sum `∑j wj * xj` is less or greater than some **threshold value**. This threshold is called bias. 
 
-# Gradientenabfall:
+# Gradient descent:
+> [Gradient descent](http://wiki.fast.ai/index.php/Gradient_Descent) is an optimization algorithm used to **minimize** some function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient. In machine learning, we use gradient descent to update the parameters of our model. Parameters refer to coefficients in linear regression and weights in neural networks. 
+
+## How it works
+Starting at the top, the first step downhill is the direction specified by the negative gradient. After that we recalculate the negative gradient by passing the coordinates of the new point. Then we take another step in the direction it specifies. Continue this process iteratively till the point is the local minium. 
+
+The size of these steps is called **learning rate**. If the learning rate is too high the risk of overshooting the lowest point increases. If the learning rate is too low it costs a lot of time to get to the bottom. 
 
 # Delta-Regel:
 
@@ -106,7 +112,7 @@ Classification is the prediction of a categorical response. For example: yes or 
 
 ## Linear Regression:
 
-[Linear Regression](http://wiki.fast.ai/index.php/Linear_Regression) is a supervised machine learning algorithm where the predicted output is continuous and has a constant slope. Is used to predict values within a continuous range. (e.g. sales, price, height) rather than trying to classify them into categories (e.g. cat, dog, chipmunk).
+[Linear Regression](http://wiki.fast.ai/index.php/Linear_Regression) is a supervised machine learning algorithm where the predicted output is continuous and has a constant slope. It is used to predict values within a continuous range. (e.g. sales, price, height) rather than trying to classify them into categories (e.g. cat, dog, chipmunk).
 
 ### Simple Linear Regression
 
@@ -117,7 +123,7 @@ Formula:
 
 ![Linear Regression](images/lin_regression.gif)
 
-WIE AUSFÜHRLICH SOLL DAS WERDEN?
+WIE AUSFÜHRLICH SOLL DAS WERDEN? sollte eigentlich so passen
 
 # Transfer-Learning:
 
