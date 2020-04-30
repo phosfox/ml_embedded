@@ -1,6 +1,11 @@
 # YOLO:
 
-You only look once
+It stands for [You only look once](https://www.youtube.com/watch?v=9s_FpMpdYW8) and is an algorithm for object detection in an image. This algorithm has to be trained. The algorithm divides an image into smaller chunks and checks for each of them if an object (predifined like car, pedestrian or motorcycle) appears in these chunks. The detected object is represented in a vector (which object was detected, at which position was the object detected). You can think of the position as a bounding box with the object within. If there was no object the vector will be 0 at the object specific index in this vector.
+
+## Step by step
+1. For each grid call, get 2 predicted bounding boxes-
+2. Get rid of low probability predictions.
+3. For each class (pedestrian, car, motorcycle) use **non-max suppression** to generate final predictions.
 
 # Hough-Transformation:
 
