@@ -98,6 +98,8 @@ Starting at the top, the first step downhill is the direction specified by the n
 
 The size of these steps is called **learning rate**. If the learning rate is too high the risk of overshooting the lowest point increases. If the learning rate is too low it costs a lot of time to get to the bottom. 
 
+![Gradient descent](images/gradient_descent.gif)
+
 # Delta-Regel:
 
 # Backpropagation:
