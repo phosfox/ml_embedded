@@ -50,8 +50,6 @@ Then
 - Assign each data point to the closest cluster (centroid).
 - Compute the centroids for the clusters by taking the average of the all data points that belong to each cluster.
 
-
-
 # Nearest-Neighbours:
 The [k-nearest neighbours](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761) algorithm is a simple and easy to implement supervised machine learning algorithm. It can be used to solve classification **and** regression problems.
 
@@ -103,6 +101,7 @@ The size of these steps is called **learning rate**. If the learning rate is too
 ![Gradient descent](images/gradient_descent.gif)
 
 # Delta-Regel:
+The [Delta Rule](https://www.techopedia.com/definition/33282/delta-rule) is a specific type of backpropagation that helps to refine connectionist ML/AI networks. It makes connections between inputs and outputs with layers of artificial neurons. It is also known as *delta learning rule*.
 
 # Backpropagation:
 The goals of [backpropagation](https://ml-cheatsheet.readthedocs.io/en/latest/backpropagation.html) are straightforward: adjust each weight in the network in proportion to how much it contributes to overall error. If we iteratively reduce each weight’s error, eventually we’ll have a series of weights that produce good predictions.
