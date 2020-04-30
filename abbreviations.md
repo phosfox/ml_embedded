@@ -68,6 +68,8 @@ PyTorch is an open source machine learning library which is mainly developed by 
 
 # Model Zoo:
 
+[Model Zoo](https://modelzoo.co/) is a way to discover open source deep learning code and pretrained models. 
+
 # COCO:
 
 COCO stands for Common Objects in Context. COCO is a dataset for object recognition created by Microsoft. It contains 91 object types that could be easily recognized by a 4 year old. The common objects are placed in complex everyday scenes in their natural context. With a total of 2.5Million labeled instances in 328k images. The images are set in the scene of everyday scenarios and in their natural context.
