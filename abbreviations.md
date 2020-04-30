@@ -81,7 +81,7 @@ CUDA stands for Compute Unified Device Architecure. It is a parallel computing p
 # Region of Interest (ROI):
 [Region of interest](https://towardsdatascience.com/understanding-region-of-interest-part-1-roi-pooling-e4f5dd65bb44) is a proposed region of an image that could be used for further processing. It is **not** a bounding box.
 
-![Region of interest](images/RoI.png)
+![Region of interest](images/RoI.png =300x300)
 
 # Perceptron:
 
