@@ -84,6 +84,11 @@ CUDA stands for Compute Unified Device Architecure. It is a parallel computing p
 ![Region of interest](images/RoI.png)
 
 # Perceptron:
+A [perceptron](http://neuralnetworksanddeeplearning.com/chap1.html#complete_zero) is a type of an artificial neuron. They were developed in the 1950s and 1960s. Nowadays it's more common to use other models of artificial neurons. 
+
+![perceptron](images/perceptron.png)
+
+In the example shown a perceptron can have multiple inputs and one output. To compute the output, each input can have an importance in form of **weights**. The perceptron can only have an output of 0 or 1 which is determined by wether the sum *∑jwjxj* is less or greater than some **threshold value**. This threshold is called bias. 
 
 # Gradientenabfall:
 
