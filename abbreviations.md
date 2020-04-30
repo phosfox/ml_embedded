@@ -88,7 +88,7 @@ A [perceptron](http://neuralnetworksanddeeplearning.com/chap1.html#complete_zero
 
 ![perceptron](images/perceptron.png)
 
-In the example shown a perceptron can have multiple inputs and one output. To compute the output, each input can have an importance in form of **weights**. The perceptron can only have an output of 0 or 1 which is determined by wether the sum *∑jwjxj* is less or greater than some **threshold value**. This threshold is called bias. 
+In the example shown a perceptron can have multiple inputs and one output. To compute the output, each input can have an importance in form of **weights**. The perceptron can only have an output of 0 or 1 which is determined by wether the sum *∑j wj * xj* is less or greater than some **threshold value**. This threshold is called bias. 
 
 # Gradientenabfall:
 
