@@ -79,6 +79,9 @@ COCO stands for Common Objects in Context. COCO is a dataset for object recognit
 CUDA stands for Compute Unified Device Architecure. It is a parallel computing platform and API model developed by Nvidia. It allows the usage of CUDA-enabled GPUs for general purpose processing (GPGPU). Using the GPU for highly parallel task can speed up the application by huge amount.
 
 # Region of Interest (ROI):
+[Region of interest](https://towardsdatascience.com/understanding-region-of-interest-part-1-roi-pooling-e4f5dd65bb44) is a proposed region of an image that could be used for further processing. It is **not** a bounding box.
+
+![Region of interest](images/RoI.png)
 
 # Perceptron:
 
@@ -90,8 +93,10 @@ CUDA stands for Compute Unified Device Architecure. It is a parallel computing p
 The goals of [backpropagation](https://ml-cheatsheet.readthedocs.io/en/latest/backpropagation.html) are straightforward: adjust each weight in the network in proportion to how much it contributes to overall error. If we iteratively reduce each weight’s error, eventually we’ll have a series of weights that produce good predictions.
 The weights get updated from the back (output layer) to the front (input layer).
 DAS IST HEAVY STUFF. Kettenregel etc.
+
 # Klassifikation:
 Classification is the prediction of a categorical response. For example: yes or no, cat or dog.
+
 # Regression:
 
 ## Linear Regression:
