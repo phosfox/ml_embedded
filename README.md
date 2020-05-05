@@ -7,6 +7,10 @@ The goal for this course is to introduce a procedure of Machine Learning
 - classification scheme on constrained devices 
 - preferably trained on the constrained device (If its not possible then train it on the notebook)
 ---
+
+ToDo for 12.5.2020
+
+- Short presentation about our topic and which stuff is needed for that
 ## Exam
 
 - Presentation of a theory part
