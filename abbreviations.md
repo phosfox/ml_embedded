@@ -11,6 +11,10 @@ It stands for [You only look once](https://www.youtube.com/watch?v=9s_FpMpdYW8) 
 
 The [Hough transformation](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hough.htm) is a technique which can be used to isolate features of a particular shape within an image. Because it requires that the desired features be specified in some parametric form, the *classical* Hough transform is most commonly used for the detection of regular curves such as lines, circles, ellipses, etc. A *generalized* Hough transform can be employed in applications where a simple analytic description of a feature(s) is not possible.
 
+## Classical Hough Transformation
+
+## Generalized Hough Transformation
+
 # HSV:
 
 [HSV](https://www.datasciencecentral.com/profiles/blogs/image-classification-with-hsv-color-model-processing) stands for the hue, saturation, value model. It is used in color image processing. Using this model, an object with a certain color can be detected.
