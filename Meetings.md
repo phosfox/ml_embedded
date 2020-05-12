@@ -32,4 +32,5 @@
 - Learning part is to determine the steering angle
 - Comments what we did in jupiter notebook
   - Upload to cloud
+- What kind of picture does the camera send to the jetson nano?
 --- 
