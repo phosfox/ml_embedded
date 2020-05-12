@@ -26,7 +26,7 @@
   - We used green because we wanted so
   - Minimum length can be set to detect
 
-## Next step
+#### Next step
 - Detect curves
 - Make video with the camera mounted to the car of the real track
 - Learning part is to determine the steering angle
