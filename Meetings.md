@@ -32,5 +32,8 @@
 - Learning part is to determine the steering angle
 - Comments what we did in jupiter notebook
   - Upload to cloud
-- What kind of picture does the camera send to the jetson nano?
+- What kind of picture does the camera send to the jetson nano
+
+- Why are there RGB cameras?
+- Why should we transform it for image processing?
 --- 
