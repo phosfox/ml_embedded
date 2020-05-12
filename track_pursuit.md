@@ -18,3 +18,8 @@ Was brauche wir alles:
 
 ## Edge detection
 ### Canny 
+
+
+## Steering
+- [Coordinates of lines needed](https://towardsdatascience.com/deeppicar-part-4-lane-following-via-opencv-737dd9e47c96)
+- 
