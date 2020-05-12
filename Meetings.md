@@ -1,4 +1,4 @@
-### Be Verbal Precise
+## Be Verbal Precise
 ---
 12.05.2020
 
@@ -26,11 +26,19 @@
   - We used green because we wanted so
   - Minimum length can be set to detect
 
-## Next step
+#### Next step
 - Detect curves
 - Make video with the camera mounted to the car of the real track
 - Learning part is to determine the steering angle
 - Comments what we did in jupiter notebook
   - Upload to cloud
+- What kind of picture does the camera send to the jetson nano
+
+- Why are there RGB cameras?
+- Why should we transform it for image processing?
+
+### Next Week
+- What did we do till last week
+- Presentation etc.
 --- 
 Why YUV Format 
