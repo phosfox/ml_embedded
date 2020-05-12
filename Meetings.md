@@ -36,4 +36,8 @@
 
 - Why are there RGB cameras?
 - Why should we transform it for image processing?
+
+### Next Week
+- What did we do till last week
+- Presentation etc.
 --- 
