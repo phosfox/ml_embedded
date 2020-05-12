@@ -28,4 +28,8 @@
 
 ## Next step
 - Detect curves
+- Make video with the camera mounted to the car of the real track
+- Learning part is to determine the steering angle
+- Comments what we did in jupiter notebook
+  - Upload to cloud
 --- 
