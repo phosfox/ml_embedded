@@ -33,3 +33,4 @@
 - Comments what we did in jupiter notebook
   - Upload to cloud
 --- 
+Why YUV Format 
