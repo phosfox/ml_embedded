@@ -93,6 +93,15 @@ def detect_lines(img):
     return lane_lines
 
 
+def steering_angle_helper(x_offset, y_offset):
+        # angle (in radian) to center vertical line
+    angle_to_mid_radian = math.atan(x_offset / y_offset)
+    # angle (in degrees) to center vertical line
+    angle_to_mid_deg = int(angle_to_mid_radian * 180.0 / math.pi)
+    # this is the steering angle needed by picar front wheel
+    return angle_to_mid_deg + 90
+
+
 def calc_steering_angle(frame, lane_lines):
     print("lane_line:", lane_lines)
     height, width, _ = frame.shape
@@ -102,12 +111,7 @@ def calc_steering_angle(frame, lane_lines):
         x1, _, x2, _ = lane_lines[0][0]
         x_offset = x2 - x1
         y_offset = int(height / 2)
-        angle_to_mid_radian = math.atan(x_offset / y_offset)
-        # angle (in degrees) to center vertical line
-        angle_to_mid_deg = int(angle_to_mid_radian * 180.0 / math.pi)
-        # this is the steering angle needed by picar front wheel
-        steering_angle = angle_to_mid_deg + 90
-        return steering_angle
+        return steering_angle_helper(x_offset, y_offset)
 
     if len(lane_lines) == 2:
         left, right = lane_lines
@@ -118,13 +122,7 @@ def calc_steering_angle(frame, lane_lines):
         mid = int(width / 2)
         x_offset = (left_x2 + right_x2) / 2 - mid
         y_offset = int(height / 2)
-        # angle (in radian) to center vertical line
-        angle_to_mid_radian = math.atan(x_offset / y_offset)
-        # angle (in degrees) to center vertical line
-        angle_to_mid_deg = int(angle_to_mid_radian * 180.0 / math.pi)
-        # this is the steering angle needed by picar front wheel
-        steering_angle = angle_to_mid_deg + 90
-        return steering_angle
+        return steering_angle_helper(x_offset, y_offset)
 
 
 def calc_heading_line(frame, steering_angle):
