@@ -14,6 +14,7 @@ ToDo for 12.5.2020
 ## Exam
 
 - Presentation of a theory part
+- Last page of presentation/paper: tell what can be done with this stuff
 - Show what the model can recognize
 - Each team should introduce to 2 algorithms of machine learning
     - like k-means, mse
