@@ -1,3 +1,5 @@
+### Be Verbal Precise
+---
 12.05.2020
 
 - Presentation at the end of semester
@@ -7,4 +9,23 @@
   - Capture width
   - Capture height
 
+- Mask
+  - Trial and Error 
+    - How can we do this with common sense?
+  - Explanation
+  - Why mask?
+    - Canny works better with that because canny detects edges
+      - Works better with clear edges
+
+- Canny
+  - Detects edges
+  - Good verbal explanation 
+
+- Hough Transformation
+  - Detects shapes 
+  - We used green because we wanted so
+  - Minimum length can be set to detect
+
+## Next step
+- Detect curves
 --- 
