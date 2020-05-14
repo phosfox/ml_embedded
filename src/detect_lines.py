@@ -94,6 +94,7 @@ def detect_lines(img):
 
 def steering_angle_helper(x_offset, y_offset):
         # angle (in radian) to center vertical line
+    print("offset: ", x_offset, y_offset)
     angle_to_mid_radian = math.atan(x_offset / y_offset)
     # angle (in degrees) to center vertical line
     angle_to_mid_deg = int(angle_to_mid_radian * 180.0 / math.pi)
