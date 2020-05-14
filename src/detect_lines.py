@@ -73,7 +73,7 @@ def average_slope_intercept(frame, line_segments):
 def detect_lines(img):
     x, y, _ = img.shape
     pts = np.array(
-        [[[y/3, x/2], [y/3*2, x/2], [y, x], [0, x]]], dtype=np.int32)
+        [[[y/2, x/2], [y, x], [0, x]]], dtype=np.int32)
     black_img = np.zeros_like(img)
     roi_image = cv2.fillPoly(black_img, pts, (255, 255, 255))
     cropped_img = np.bitwise_and(img, roi_image)
@@ -156,7 +156,6 @@ if __name__ == "__main__":
         if not ret:
             video = cv2.VideoCapture(video_path)
             continue
-
         lines = detect_lines(frame)
         steering_angle = calc_steering_angle(frame, lines)
         print("Angle:", steering_angle)
