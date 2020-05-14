@@ -47,8 +47,7 @@ def average_slope_intercept(frame, line_segments):
                     'skipping vertical line segment (slope=inf): %s' % line_segment)
                 continue
             fit = np.polyfit((x1, x2), (y1, y2), 1)
-            slope = fit[0]
-            intercept = fit[1]
+            slope, intercept = fit
             if slope < 0:
                 if x1 < left_region_boundary and x2 < left_region_boundary:
                     left_fit.append((slope, intercept))
@@ -103,7 +102,6 @@ def steering_angle_helper(x_offset, y_offset):
 
 
 def calc_steering_angle(frame, lane_lines):
-    print("lane_line:", lane_lines)
     height, width, _ = frame.shape
     if not lane_lines:
         return 90
@@ -146,18 +144,31 @@ def calc_heading_line(frame, steering_angle):
     return (x1, y1, x2, y2)
 
 
+prev_angle = 90
+
+
+def smooth_angle(new_angle, tolerance):
+    global prev_angle
+    if new_angle >= prev_angle - tolerance and new_angle <= prev_angle + tolerance:
+        prev_angle = new_angle
+    if new_angle <= prev_angle:
+        new_angle = prev_angle - tolerance
+    if new_angle >= prev_angle:
+        new_angle = prev_angle + tolerance
+    else:
+        new_angle = prev_angle
+    return new_angle
+
+
 if __name__ == "__main__":
     video_path = ".\\videos\\car_pov.mp4"
     video = cv2.VideoCapture(video_path)
-    cnt = 0
-    while True:
+    while video.isOpened():
         ret, frame = video.read()
-        print("Frame: ", cnt)
-        if not ret:
-            video = cv2.VideoCapture(video_path)
-            continue
+        height, width, _ = frame.shape
         lines = detect_lines(frame)
         steering_angle = calc_steering_angle(frame, lines)
+        steering_angle = smooth_angle(steering_angle, 5)
         print("Angle:", steering_angle)
         heading_line = calc_heading_line(frame, steering_angle)
         print("Heading_line:", heading_line)
@@ -167,10 +178,12 @@ if __name__ == "__main__":
                 h_x1, h_y1, h_x2, h_y2 = heading_line
                 cv2.line(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                 cv2.line(frame, (h_x1, h_y1), (h_x2, h_y2), (0, 0, 255), 3)
+        cv2.putText(frame, str(steering_angle), (int(width/2), height),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+
         cv2.imshow("frame", frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-        cnt += 1
     video.release()
     cv2.destroyAllWindows()
