@@ -107,11 +107,8 @@ def calc_steering_angle(frame, lane_lines):
     if not lane_lines:
         return 90
     if len(lane_lines) < 2:
-        x1, _, x2, _ = lane_lines[0][0]
-        x_offset = x2 - x1
-        y_offset = int(height / 2)
         return 90
-        #return steering_angle_helper(x_offset, y_offset)
+
 
     if len(lane_lines) == 2:
         left, right = lane_lines
