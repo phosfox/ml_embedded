@@ -147,7 +147,7 @@ def calc_heading_line(frame, steering_angle):
 
 
 if __name__ == "__main__":
-    video_path = ".\\videos\\car_pov.mp4"
+    video_path = ".\\videos\\test.mp4"
     video = cv2.VideoCapture(video_path)
     cnt = 0
     while True:
@@ -168,6 +168,7 @@ if __name__ == "__main__":
                 h_x1, h_y1, h_x2, h_y2 = heading_line
                 cv2.line(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                 cv2.line(frame, (h_x1, h_y1), (h_x2, h_y2), (0, 0, 255), 3)
+        frame = imS = cv2.resize(frame, (960, 540));
         cv2.imshow("frame", frame)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
