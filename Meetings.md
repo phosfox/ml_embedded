@@ -42,3 +42,8 @@
 - Presentation etc.
 --- 
 Why YUV Format 
+
+---
+19.05.2020
+
+EVERYTHING WAS PERFEKT!!!!!!!
