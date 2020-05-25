@@ -4,10 +4,12 @@ from __future__ import print_function
 import math
 import sys
 sys.path.append("~/jetbot/jetbot")
+sys.path.append("~/jetcam/jetcam")
 
+import cv2
 import inputs
-from jetbot import Robot
-
+from jetcam.csi_camera import CSICamera
+from jetbot import Robot, Camera
 
 
 EVENT_ABB = (
@@ -42,7 +44,7 @@ EVENT_ABB = (
     ('Key-BTN_PINKIE', 'TR')
 )
 
-
+    
 
 # This is to reduce noise from the PlayStation controllers
 # For the Xbox controller, you can set this to 0
@@ -55,12 +57,15 @@ def normalize(x):
 
 class JSTest(object):
     """Simple joystick test class."""
-    def __init__(self, robot, gamepad=None, abbrevs=EVENT_ABB):
+    def __init__(self, robot,camera, gamepad=None, abbrevs=EVENT_ABB):
+        self.camera = camera
         self.robot = robot
         self.btn_state = {}
         self.old_btn_state = {}
+        self.speed = 0.1
         self.abs_state = {}
         self.old_abs_state = {}
+        self.counter = 0
         self.abbrevs = dict(abbrevs)
         for key, value in self.abbrevs.items():
             if key.startswith('Absolute'):
@@ -75,14 +80,16 @@ class JSTest(object):
             self._get_gamepad()
 
 
-    def increase_speed(self):
+    def forward(self):
         print("inc")
-        self.robot.forward(speed=0.3)
+        self.speed += 0.1
+        self.robot.forward(self.speed)
 
-    def decrease_speed(self):
+    def backward(self):
         print("dec")
-        self.robot.backward(speed=0.3)
-
+        self.speed -= 0.1
+        self.robot.backward(self.speed)
+        
     def stop(self):
         print("stop")
         self.robot.stop()
@@ -90,22 +97,37 @@ class JSTest(object):
     def steer_x(self, status):
         norm = normalize(status)
         if norm < 0.5:
-            self.robot.left(speed=0.3)
-            self.robot.forward(speed=0.3)
+            self.robot.left(self.speed)
+            self.robot.forward(self.speed)
         else:
-            self.robot.right(speed=0.3)
-            self.robot.forward(speed=0.3)
+            self.robot.right(self.speed)
+            self.robot.forward(self.speed)
         print("steer_x: ", norm)
         print("steer_x: ", status)
 
     def steer_y(self, status):
         norm = normalize(status)
         if norm > 0.51:
-            self.robot.backward(speed=0.3)
+            self.robot.backward(self.speed)
         else:
-            self.robot.forward(speed=0.3)
+            self.robot.forward(self.speed)
         print("steer_y: ", norm)
         print("steer_y: ", status)
+
+    def start_recording(self):
+        image = self.camera.read()
+        button_state_X = self.abs_state.get("A0", 0)
+        button_state_Y = self.abs_state.get("A1", 0)
+        base_string = f"images/drive_{self.counter}_{button_state_X}_{button_state_Y}.jpg"
+        cv2.imwrite(base_string, image)
+        self.counter += 1
+
+    def stop_recording(self):
+        #self.camera.stop()
+        pass
+
+    def get_x(self):
+        pass
 
     def _get_gamepad(self):
         """Get a gamepad object."""
@@ -137,15 +159,20 @@ class JSTest(object):
         event_state = event.state
 
         if event_code == "BTN_TL":
-            self.increase_speed()
+            self.forward()
         elif event_code == "BTN_TR":
-            self.decrease_speed()
+            self.backward()
         elif event_code == "BTN_EAST":
             self.stop()
         elif event_code == "ABS_X":
             self.steer_x(event_state)
         elif event_code == "ABS_Y":
             self.steer_y(event_state)
+        elif event_code == "BTN_WEST":
+            self.stop_recording()
+        elif event_code == "BTN_NORTH":
+            self.start_recording()
+
         else:
             print("Invalid")
 
@@ -211,7 +238,8 @@ class JSTest(object):
 def main():
     """Process all events forever."""
     robot = Robot()
-    jstest = JSTest(robot)
+    camera = CSICamera(width=224, height=224, capture_width=3280, capture_height=2464, capture_fps=21)
+    jstest = JSTest(robot, camera)
     while 1:
         jstest.process_events()
 
