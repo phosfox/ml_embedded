@@ -2,6 +2,8 @@
 
 from __future__ import print_function
 import math
+import threading
+import time
 import sys
 sys.path.append("~/jetbot/jetbot")
 sys.path.append("~/jetcam/jetcam")
@@ -58,6 +60,8 @@ def normalize(x):
 class JSTest(object):
     """Simple joystick test class."""
     def __init__(self, robot,camera, gamepad=None, abbrevs=EVENT_ABB):
+        self.record_thread = threading.Thread(target=self.record)
+        self.record = False
         self.camera = camera
         self.robot = robot
         self.btn_state = {}
@@ -114,17 +118,37 @@ class JSTest(object):
         print("steer_y: ", norm)
         print("steer_y: ", status)
 
+    def map_x_y(self, x, y, shape):
+        h, w, _ = shape
+        new_x = int(x * w / 2 + w /2)
+        new_y = int(y * h / 2 + h /2)
+        return (new_x, new_y)
+
+    def record(self):
+        while self.record:
+            image = self.camera.read()
+            button_state_X = self.abs_state.get("A0", 0)
+            button_state_Y = self.abs_state.get("A1", 0)
+
+            x, y = self.map_x_y(normalize(button_state_X), normalize(button_state_Y), image.shape)
+            print(f"x:{x}, y:{y}")
+            base_string = f"images/drive_{self.counter}_{x}_{y}.jpg"
+            cv2.imwrite(base_string, image)
+            self.counter += 1
+            time.sleep(1)
+
+
     def start_recording(self):
-        image = self.camera.read()
-        button_state_X = self.abs_state.get("A0", 0)
-        button_state_Y = self.abs_state.get("A1", 0)
-        base_string = f"images/drive_{self.counter}_{button_state_X}_{button_state_Y}.jpg"
-        cv2.imwrite(base_string, image)
-        self.counter += 1
+        if not self.record:
+            self.record = True
+            self.record_thread.start()
+            print("thread started")
 
     def stop_recording(self):
-        #self.camera.stop()
-        pass
+        if self.record:
+            self.record = False
+            self.record_thread.join()
+            print("thread stopped")
 
     def get_x(self):
         pass
