@@ -19,7 +19,7 @@ ToDo for 12.5.2020
 - Each team should introduce to 2 algorithms of machine learning
     - like k-means, mse
 
-- 45min presentation p.P. of your part
+- 45min presentation p.P. of your part at the beginning of july
 - After that 5-15min presentation of the car with explanation
 ---
 # Learning methods
