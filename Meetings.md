@@ -42,3 +42,9 @@
 - Presentation etc.
 --- 
 Why YUV Format 
+
+---
+26.05.2020
+
+## ToDo:
+Get the pictures into the drive.
