@@ -70,17 +70,18 @@ def average_slope_intercept(frame, line_segments):
 
 
 def detect_lines(img):
-    x, y, _ = img.shape
+    y, x, _ = img.shape
     pts = np.array(
-        [[[y/2, x/2], [y, x], [0, x]]], dtype=np.int32)
+        [[[0, y/2], [x, y/2], [x, y], [0, y]]], dtype=np.int32)
+
     black_img = np.zeros_like(img)
     roi_image = cv2.fillPoly(black_img, pts, (255, 255, 255))
     cropped_img = np.bitwise_and(img, roi_image)
 
     gray_img = cv2.cvtColor(cropped_img, cv2.COLOR_BGR2GRAY)
-
-    low_white = np.array([235])
-    up_white = np.array([255])
+    cv2.imshow("test", gray_img)
+    low_white = np.array([90])
+    up_white = np.array([150])
     mask_img = cv2.inRange(gray_img, low_white, up_white)
 
     edges_img = cv2.Canny(mask_img, 75, 150)
@@ -162,7 +163,8 @@ def smooth_angle(new_angle, tolerance):
 
 
 if __name__ == "__main__":
-    video_path = ".\\videos\\car_pov.mp4"
+    video_path = "C:\\Users\\Constantin\\Downloads\\DeepPiCar-master\\models\\lane_navigation\\data\\images\\video01.avi"
+    #video_path = ".\\videos\\car_pov.mp4"
     video = cv2.VideoCapture(video_path)
     while video.isOpened():
         ret, frame = video.read()
@@ -184,7 +186,7 @@ if __name__ == "__main__":
 
         cv2.imshow("frame", frame)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(30) & 0xFF == ord('q'):
             break
     video.release()
     cv2.destroyAllWindows()
