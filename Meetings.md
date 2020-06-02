@@ -47,3 +47,7 @@ Why YUV Format
 19.05.2020
 
 EVERYTHING WAS PERFECT!!!!!!!
+---
+## Meeting 02.06.2020
+- Take pictures with traffic signs etc. in different distances
+- 6-13. July possible presentation
