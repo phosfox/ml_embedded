@@ -51,3 +51,6 @@ EVERYTHING WAS PERFECT!!!!!!!
 ## Meeting 02.06.2020
 - Take pictures with traffic signs etc. in different distances
 - 6-13. July possible presentation
+
+## Meeting 09.06.2020
+- Why is the model 83MB?
