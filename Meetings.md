@@ -48,3 +48,8 @@ Why YUV Format
 
 ## ToDo:
 Get the pictures into the drive.
+
+---
+16.06.2020
+- memory on jetbot
+
