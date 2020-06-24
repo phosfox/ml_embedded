@@ -82,4 +82,5 @@
     - Transfer Learning, ja nein
  - Camera Input
  - Auto lenkt anhand der Infered Bilder
+   - Output wird anhand des Inputs richtig vorhergesagt
  - LiveDemo!!!!!!
