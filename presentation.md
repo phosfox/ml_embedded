@@ -84,3 +84,11 @@
  - Auto lenkt anhand der Infered Bilder
    - Output wird anhand des Inputs richtig vorhergesagt
  - LiveDemo!!!!!!
+
+# Ideen für die Präsi
+- Dem Publikum ein paar unserer Bilder zeigen und fragen wie sie die labeln würden -> Richtiges labeln ist wichtig, aber auch schwierig (zumindest für uns)
+- Kurzes (evtl. 10s) Video zeigen wie das Auto in der Entwicklung fährt 
+  - Mit den 3 label
+  - Mit Code aus der BA
+  - Vielleicht verbesserungen zeigen
+    - "Dann haben wir das gemacht und so hat sichs ausgewirkt" -> Kurzes video
