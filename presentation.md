@@ -84,6 +84,7 @@
  - Auto lenkt anhand der Infered Bilder
    - Output wird anhand des Inputs richtig vorhergesagt
  - LiveDemo!!!!!!
+   - Videofeed der Kamera + den predicted Labels zeigen (Script schreiben)
 
 # Ideen für die Präsi
 - Dem Publikum ein paar unserer Bilder zeigen und fragen wie sie die labeln würden -> Richtiges labeln ist wichtig, aber auch schwierig (zumindest für uns)
