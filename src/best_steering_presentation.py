@@ -23,7 +23,15 @@ class Line_Detection:
         return image[None, ...]
 
     def interruptHandler(self, signal, frame):
+        cv2.destroyAllWindows()
         sys.exit(0)
+
+    def showImage(self, image, text):
+        img_with_text = cv2.putText(image, text, (5,20),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,255), 2)
+        cv2.imshow("Cam", img_with_text)
+        cv2.waitKey(1)
+
 
     def execute(self, change):
         steering = 0.00
@@ -37,6 +45,7 @@ class Line_Detection:
         self.angle_last = self.angle
 
         steering = pid + steering
+        self.showImage(image, f"Steering: {steering:.3f}")
         print(f"arctan({x}, {y}) = {self.angle}")
         print("speed:" ,self.speed)
         self.robot.left_motor.value = max(min(self.speed + steering, 1.0), 0.0)

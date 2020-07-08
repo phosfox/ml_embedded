@@ -60,7 +60,7 @@ class Driver():
 def main():
     robot = Robot()
     camera = CSICamera(width=224, height=224, capture_width=224, capture_height=224, capture_fps=1)
-    line_detection_model = Line_Detection("./models/resnet18_norm_0.90acc.pth")
+    line_detection_model = Line_Detection("/home/jetbot/Notebooks/models/resnet18_norm_0.90acc.pth")
     driver = Driver(robot, camera, line_detection_model)
     driver.drive() #loop
 

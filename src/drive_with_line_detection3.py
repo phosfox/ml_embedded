@@ -23,8 +23,9 @@ class Driver():
             prep_image = self.model.preprocess(raw_image)
             direction = self.model.predict(prep_image)
             self.action.get(direction)()
+            cv2.imshow("BLA", raw_image)
+            cv2.waitKey(1)
             print(direction)
-            #cv2.imshow(direction, raw_image)
 
     def accelerate(self):
         self.speed += 0.05
@@ -55,7 +56,7 @@ class Driver():
 
 def main():
     robot = Robot()
-    camera = CSICamera(width=224, height=224, capture_width=224, capture_height=224, capture_fps=1)
+    camera = CSICamera(width=224, height=224, capture_width=1280, capture_height=720, capture_fps=1)
     line_detection_model = Line_Detection("/home/jetbot/Notebooks/models/resnet18_norm_0.90acc.pth")
     driver = Driver(robot, camera, line_detection_model)
     driver.drive() #loop
