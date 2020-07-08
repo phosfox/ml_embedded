@@ -94,3 +94,6 @@
   - Vielleicht verbesserungen zeigen
     - "Dann haben wir das gemacht und so hat sichs ausgewirkt" -> Kurzes video
 - Was ist anders zwischen Deep learning und ML auf embedded systems?
+- Pattern matching und regression --> Abläufe
+  - Pattern matching (unser Ansatz) --> Mehr Klassen, funktioniert nicht so gut
+  - Regression (Ansatz der BA) --> Schätzen des Winkels zur Mittellinie
