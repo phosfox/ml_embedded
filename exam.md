@@ -74,4 +74,31 @@
 - Repräsentiert die Umgebung des Agenten
 - Sagt voraus, was die Umgebung als nächstes tun wird
 - *P* erratet den nächsten State
-- *R* erratet den nächsten Reward
+- *R* erratet den nächsten Reward 
+---
+
+## How does it learn?
+- Exploration und Exploitation
+  - Trial-and-Error
+  - Exploitation nutzt den besten Pfad um den Reward zu maximieren
+  - Exploration nutzt unbekannte Wege um neues zu Erkunden
+
+&rarr; Es sollte immer ein zwischending aus Exploitation und Exploration geben, damit die Policy verbessert wird
+---
+
+## Limitations of Reinforcement Learning
+- Viele Versuche nicht immer möglich
+- Benötigt viele Versuche
+  - Roboterarm Objekte Greifen: 580.000 Versuche
+- Grenzen von virtuellen Umgebungen
+  - Dynamiken der Umgebung schwer realisierbar
+  - Schwer erlernbare Umgebung
+- Zu viele Actions und States die berechnet werden müssen
+  - Rechenaufwand
+---
+
+## Q-Learning
+![](images/Q-Learning.png)
+
+- Output der Bellman-Funktion
+  - Inputs sind State und Action
