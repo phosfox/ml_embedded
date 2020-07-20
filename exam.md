@@ -35,6 +35,7 @@ Klassifiziert alle Pixel eines Bildes in sinnvolle Objektklassen.
 Instanz Segmentierung: Identifiziert jede Instanz jedes Objekts in einem Bild
 ## Was ist die Histogrammbasierte Segmentierung?
 Graustufenbild wird in zwei Segmente unterteilt schwarz/weiß was dann für Vordergrund (das Objekt) und Hintergrund steht
+![](images/histogram.png)
 ## Was ist das Schwellenwertverfahren?
 Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahren 
 * pixelorientiert: Jedes Pixel wird in seine Graustufenrepräsentation umgewandlet
@@ -42,11 +43,12 @@ Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahr
 Richtigen Schwellenwert wählen ist schwer. Zu niedrig werden zu viele Pixel weiß. Zu hoch und es werden zu viele Pixel schwarz.
 ## Gibt noch Graphenbasierte Segmentierungsverfahren:
 * Random Walker
+![](images/random-walker.png)
 ## Regionbasierte Segmentierungsverfahren:
 Es gibt also eine Homogenitätskriterium die bestimmt ob zwei benachbarte Pixel zusammenpassen oder nicht und anhand dessen wird das gesamte Bild segmentiert.
 ### Region Merging
 Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasierten Segmentierung gehört
-
+![](images/region-merging.png)
 1. Initial wird jedes Pixel zu einem Segment erklärt
 2. Festlegen des Homogenitätskriterium (z.B. ein Grauwertunterschied zwischen zwei betrachteten Nachbarn)
 3. Zwei benachbarte Regionen werden zusammengefasst, wenn sie auch gemeinsam das Homogenitätskriterium erfüllen 
