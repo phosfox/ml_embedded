@@ -20,4 +20,7 @@
 ## Hyperparameter Tuning
 ## Adversarial Attacks / One Pixel-Attack
 ## Tensor
-## 
+
+# Presentation Frieß & Schaebler
+
+# Presentation Nunn & Awerjanow
