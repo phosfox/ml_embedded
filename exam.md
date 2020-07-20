@@ -5,6 +5,7 @@
 ## ResNet
 ## Forward Propagation
 ## Backward Propagation
+## Our Implementations
 
 # Presentation Roeder & Mueller
 ## CNN
