@@ -39,7 +39,7 @@ ReLu, Softmax
 ---
 
 # Presentation Roeder & Mueller
-## CNN
+## CNN - Convolutional Neural Network
 - Gerne für Klassifikationen von Bildern genommen
   - Erkennung von bspw. Objekten und Gesichtern, ... 
 
