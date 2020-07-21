@@ -17,12 +17,43 @@
 ## CNN
 ---
 ## Kernel
+[![Kernel-Gif](images/CNN-Kernel.gif)](https://i.stack.imgur.com/9Iu89.gif)
 ---
 ## CNN Pooling Layer
+- Aggregation der Ergebnisse von Convolutional Layern
+- Nur das **stärkste** Signal wird weitergegeben
+  - Schwächere Signale werden verworfen
+- Ziele des Poolings
+  - Weitergabe des relevantesten Signals an die nächste Schicht
+  - Erreichen einer abstrakteren Repräsentation des Inhaltes
+  - Reduktion der Parameter eines Netzes
+
+Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl reduziert.
+![](images/Pooling-Layer.png)
 ---
 ## CNN-Dense / Fully Connected Layer
 ---
-## R-CNN
+## CNN-Aktivierungsfunktionen und Optimierung
+- Meist durch ReLU (Rectified Linear Unit)
+  - Werte < 0 &rarr; 0
+  - Werte > 0 &rarr; werden nicht verändert
+- Letzter Layer hat bei der Klassifizierung eine **Softmax**-Aktivierung
+  - Output aller Output-Neuronen addiert sich zu 1
+  - Gibt dadurch die Wahrscheinlichkeit des entsprechenden Outputs
+- Gewichte der Filter (Kernel) und Fully-Connected-Layer werden anfangs **zufällig** gewählt und **während** des Trainings durch **Backpropagation** weiter optimiert
+---
+## R-CNN (Region-based CNN)
+- Kombination aus "Rectangular Region Proposals" und CNNs
+- Rectangular Region Proposal
+  - Methode um rechteckige Regionen in Bildern zu bestimmen
+- Zweistufiger Objekterkennungs-Algorithmus
+  - Schritt 1: Teilmenge (ca. 2000) von Regionen eines Bildes identifizieren/vorschlagen (Bspw. durch Selective Search Methode)
+  - Schritt 2: Für jede Region das entsprechende Objekt klassifizieren
+
+### Selective Search Methode
+- Einführende **"Übersegmentierung"** des Input-Bildes in viele kleine Regionen
+- **Rekursives** Kombinieren kleiner (ähnlicher) Regionen zu größeren
+![](images/Selective-Search.png)
 ---
 ## Fast R-CNN
 ---
