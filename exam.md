@@ -54,6 +54,16 @@ Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl
 - Einführende **"Übersegmentierung"** des Input-Bildes in viele kleine Regionen
 - **Rekursives** Kombinieren kleiner (ähnlicher) Regionen zu größeren
 ![](images/Selective-Search.png)
+
+Beispiel:
+1. Bild-Input
+2. Regions of Interest (RoI) mit Hilfe eines **"external proposer"** (Bspw. Selective Search) vorschlagen und deren Größe für das CNN anpassen
+3. CNN-Prozess für alle RoI anwenden
+   1. Bounding Box regressors verfeinern die Boxen, in denen sich Objekte befinden
+4. Obkjekte in Regionen mit HIlfe der **Support Vector Machine** (SVM) klassifizieren
+
+![](images/RNN-Beispiel.png)
+
 ---
 ## Fast R-CNN
 ---
