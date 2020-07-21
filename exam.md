@@ -64,22 +64,93 @@ Beispiel:
 
 ![](images/RNN-Beispiel.png)
 
+#### Support Vector Machine
+- Verfahren zur Unterteilung einer Menge von Objekten in Klassen
+
+Beispiel:
+Trennfläche zwischen den Klassen (Rot und Blau) mit maximalem Abstand zu Objekten im Vektorraum einpassen 
+
+![](images/Support-Vector-Machine.png)
+
 ---
 ## Fast R-CNN
+- Besitzt eine bessere **mean Average Precision** (mAP)
+  - Es ist also **schneller**
+  - Liegt daran, dass bei R-CNN für alle 2000 RoI das CNN ausgeführt werden musste
+- RoI wird hier erst abgestimmt, nachdem das CNN einmal durchgeführt wurde
 ---
 ## Faster R-CNN
+- Funktionsweise
+  - Wie Fast R-CNN mit dem Unterschied, dass es keine **external region proposal** Methode (Selective Search) benötigt.
+  - Selective Search wird durch ein **Region Proposal Network** (RPN) ersetzt
+    - Dieses ist schneller als Selective Search
+
+### Region Proposal Network
+- Schneller als Selective Search
+- Generiert Vorschläge für mögliche Objekte
+- Lernt aus Feature Maps des Basis-Networks bessere Vorschläge zu machen
 ---
 ## YOLO
+- **Objekterkennungs-Algorithmus**, der für real-time processing verwendet wird
+  - Schnell
+- Algorithmus sieht das original Bild nur **ein** mal
+- Das gesamte Bild wird nur von einem NN bearbeitet
+- Unterteilung des Bildes in Regionen
+  - Vorhersagen für Bounding Boxen und Wahrscheinlichkeit jeder Region
+- Nur **ein** Objekt pro Region
+- Vorhersagen werden durch den *globalen Kontext** des Bildes getroffen
 ---
 ## Single Shot Detection
+- Ähnlich wie YOLO
+- Definition von mehreren **Standard Bounding Boxen** mit verschiedenen Seitenverhältnissen und Maßstäben
+- Standardboxen werden mit den Objektkategorien verglichen
+- Genauer als YOLO, da es mehr Zwischenlagen/Zwischenschritte hat
+  
+&rarr; Gute Genauigkeit bei moderater Geschwindigkeit
 ---
 ## Transfer Learning
+> [Transfer learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/) is a machine learning technique where a model trained on one task is re-purposed on a second related task.
+
+> Transfer learning is an optimization that allows rapid progress or improved performance when modeling the second task.
+
+Vorteile:
+  - Model hat bereits Vorwissen
+  - Schnellere Anpassung
+  - Besseres Gesamtergebnis
+
+![](images/Transfer_Learning.png)
 ---
 ## Hyperparameter Tuning
+> A hyperparameter is a parameter whose value is set before the learning process begins
+
+- [Parameter](https://towardsdatascience.com/hyperparameter-tuning-c5619e7e6624), die nicht "gelernt" werden können
+
+Neuronen
+  - Wenige 
+    - Underfitting (Komplexe Daten nicht abbildbar)
+  - Viele Neuronen
+    - Nicht alle Neuronen können gut angelernt weredn
+      - Informationen der Trainingsdaten nicht ausreichend
+    - Hohe Trainingsdauer
+
+### Grid Search - Tuning
+- Grid Search
+  - Baut/Lernt für jeden Parameter ein neus Modell
+  - Rechenaufwendig
+
 ---
 ## Adversarial Attacks / One Pixel-Attack
----
-## Tensor
+Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein NN zu täuschen.
+
+![](images/One-Pixel.png)
+
+### Schutzmöglichkeiten
+- Adversial Training
+  - Brute-Force (eigene adversarial Bilder)
+  - Verbessert Generalisation
+- Defense Distillation
+  - Einführung eines zweiden Modells
+  - Dieses prüft auf Wahrscheinlichkeitswerte
 ---
 
 # Presentation Frieß & Schaebler
