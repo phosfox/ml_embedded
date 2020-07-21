@@ -156,20 +156,28 @@ Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein
 # Presentation Frieß & Schaebler
 ## Was ist der Kontrast?
 Unterschied zwischen hellen und dunklen Bildbereichen
+
 ---
 ## Was ist Gamma?
 Gamma ist ein Wert für die relative Helligkeit bzw. Dunkelheit des Bilds
+
 ---
 ## Was ist die Segmentierung?
 Einteilen des Bildes in Teilbereiche (Segmente), legt die Objektklassen der Segmente fest und maskiert die Objekte
+
 ### Was ist die Semantische Segmentierung?
 Klassifiziert alle Pixel eines Bildes in sinnvolle Objektklassen.
+
 ### Was ist die Instanz Segmentierung?
+
 Instanz Segmentierung: Identifiziert jede Instanz jedes Objekts in einem Bild
+
 ---
 ## Was ist die Histogrammbasierte Segmentierung?
+
 Graustufenbild wird in zwei Segmente unterteilt schwarz/weiß was dann für Vordergrund (das Objekt) und Hintergrund steht
 ![](images/histogram.png)
+
 ---
 ## Was ist das Schwellenwertverfahren?
 Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahren 
@@ -192,14 +200,19 @@ Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasi
 4. Segmentierung ist beendet, wenn keine zwei Regionen mehr zusammengefasst werden können
 ---
 ## Kantenbasiertes Segmentierungsverfahren:
+
 Bei der Kantenerkennung wird lediglich versucht, die Bereiche in einem Bild zu finden, in denen sich die Helligkeit oder die Farbe eines Pixelbereiches stark ändert. 
+
 Ein hoher Wert zeigt eine steile Änderung an und ein niedriger Wert zeigt eine flache Änderung an.
+
 ---
+
 ## Kantenerkennung mit Sobel Operator:
 Bei Verwendung der Sobel-Kantenerkennung wird das Bild zuerst separat in X- und Y-Richtung verarbeitet und dann zu einem neuen Bild kombiniert, das die Summe der X- und Y-Kanten des Bildes darstellt.
 
 Ein Kernel ist eine 3 x 3-Matrix, die aus unterschiedlich (oder symmetrisch) gewichteten Indizes besteht. Dies stellt den Filter dar, den wir für eine Kantenerkennung implementieren werden
 RGB -> Grayscale
+
 ---
 ## Region Based Semantic Segmentation:
 „Segmentierung durch Erkennung“-Pipeline
