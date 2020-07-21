@@ -32,6 +32,14 @@ Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl
 ![](images/Pooling-Layer.png)
 ---
 ## CNN-Dense / Fully Connected Layer
+> [Dense und Fully Connected](https://forums.fast.ai/t/dense-vs-convolutional-vs-fully-connected-layers/191) bedeutet das selbe
+>-Jeremy Howard
+
+> [A linear operation](https://forums.fast.ai/t/dense-vs-convolutional-vs-fully-connected-layers/191/3) in which every input is connected to every output by a weight (so there are n_inputs * n_outputs weights - which can be a lot!). Generally followed by a non-linear activation function
+>-Jeremy Howard
+
+> [Neurons in a fully connected layer](https://cs231n.github.io/convolutional-networks/#conv) have full connections to all activations in the previous layer, as seen in regular Neural Networks. Their activations can hence be computed with a matrix multiplication followed by a bias offset. See the Neural Network section of the notes for more information.
+
 ---
 ## CNN-Aktivierungsfunktionen und Optimierung
 - Meist durch ReLU (Rectified Linear Unit)
