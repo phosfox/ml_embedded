@@ -17,6 +17,7 @@ ReLu, Softmax
 ## Was ist Forwardpropagation?
 ## Was ist eine Loss Function?
 ## Was ist Gradient Descent?
+## Was ist ein sog. vanishing gradient?
 ## Was ist Backwardpropagation?
 ## Warum kann ML auf emb. Devices zu Problemen führen?
 ## Was ist ResNet?
@@ -25,6 +26,9 @@ ReLu, Softmax
 ## Was ist Klassifikation?
 ## Was ist Regression? 
 ## Was ist der ArcTan2?
+
+
+
 # Our presentation
 ---
 ## Learning Categories
