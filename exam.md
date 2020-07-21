@@ -45,7 +45,7 @@ ReLu, Softmax
 
 [![CNN](images/CNN.jpeg)](https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148)
 
-- Unter Convolution versteht man hier das Zusammenfassen von Features des Input Bildes
+- Unter Convolution versteht man hier das Zusammenfassen von Features des Input Bildes mit Hilfe des Kernels
 - Dabei wird die Beziehung zwischen den Pixeln beibehalten
   - Geschieht, da die Image Features **"gelernt"** werden
   - Dazu wird der Kernel verwendet
