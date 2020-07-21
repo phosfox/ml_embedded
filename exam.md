@@ -64,41 +64,120 @@ Beispiel:
 
 ![](images/RNN-Beispiel.png)
 
+#### Support Vector Machine
+- Verfahren zur Unterteilung einer Menge von Objekten in Klassen
+
+Beispiel:
+Trennfläche zwischen den Klassen (Rot und Blau) mit maximalem Abstand zu Objekten im Vektorraum einpassen 
+
+![](images/Support-Vector-Machine.png)
+
 ---
 ## Fast R-CNN
+- Besitzt eine bessere **mean Average Precision** (mAP)
+  - Es ist also **schneller**
+  - Liegt daran, dass bei R-CNN für alle 2000 RoI das CNN ausgeführt werden musste
+- RoI wird hier erst abgestimmt, nachdem das CNN einmal durchgeführt wurde
 ---
 ## Faster R-CNN
+- Funktionsweise
+  - Wie Fast R-CNN mit dem Unterschied, dass es keine **external region proposal** Methode (Selective Search) benötigt.
+  - Selective Search wird durch ein **Region Proposal Network** (RPN) ersetzt
+    - Dieses ist schneller als Selective Search
+
+### Region Proposal Network
+- Schneller als Selective Search
+- Generiert Vorschläge für mögliche Objekte
+- Lernt aus Feature Maps des Basis-Networks bessere Vorschläge zu machen
 ---
 ## YOLO
+- **Objekterkennungs-Algorithmus**, der für real-time processing verwendet wird
+  - Schnell
+- Algorithmus sieht das original Bild nur **ein** mal
+- Das gesamte Bild wird nur von einem NN bearbeitet
+- Unterteilung des Bildes in Regionen
+  - Vorhersagen für Bounding Boxen und Wahrscheinlichkeit jeder Region
+- Nur **ein** Objekt pro Region
+- Vorhersagen werden durch den *globalen Kontext** des Bildes getroffen
 ---
 ## Single Shot Detection
+- Ähnlich wie YOLO
+- Definition von mehreren **Standard Bounding Boxen** mit verschiedenen Seitenverhältnissen und Maßstäben
+- Standardboxen werden mit den Objektkategorien verglichen
+- Genauer als YOLO, da es mehr Zwischenlagen/Zwischenschritte hat
+  
+&rarr; Gute Genauigkeit bei moderater Geschwindigkeit
 ---
 ## Transfer Learning
+> [Transfer learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/) is a machine learning technique where a model trained on one task is re-purposed on a second related task.
+
+> Transfer learning is an optimization that allows rapid progress or improved performance when modeling the second task.
+
+Vorteile:
+  - Model hat bereits Vorwissen
+  - Schnellere Anpassung
+  - Besseres Gesamtergebnis
+
+![](images/Transfer_Learning.png)
 ---
 ## Hyperparameter Tuning
+> A hyperparameter is a parameter whose value is set before the learning process begins
+
+- [Parameter](https://towardsdatascience.com/hyperparameter-tuning-c5619e7e6624), die nicht "gelernt" werden können
+
+Neuronen
+  - Wenige 
+    - Underfitting (Komplexe Daten nicht abbildbar)
+  - Viele Neuronen
+    - Nicht alle Neuronen können gut angelernt weredn
+      - Informationen der Trainingsdaten nicht ausreichend
+    - Hohe Trainingsdauer
+
+### Grid Search - Tuning
+- Grid Search
+  - Baut/Lernt für jeden Parameter ein neus Modell
+  - Rechenaufwendig
+
 ---
 ## Adversarial Attacks / One Pixel-Attack
----
-## Tensor
+Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein NN zu täuschen.
+
+![](images/One-Pixel.png)
+
+### Schutzmöglichkeiten
+- Adversial Training
+  - Brute-Force (eigene adversarial Bilder)
+  - Verbessert Generalisation
+- Defense Distillation
+  - Einführung eines zweiden Modells
+  - Dieses prüft auf Wahrscheinlichkeitswerte
 ---
 
 # Presentation Frieß & Schaebler
 ## Was ist der Kontrast?
 Unterschied zwischen hellen und dunklen Bildbereichen
+
 ---
 ## Was ist Gamma?
 Gamma ist ein Wert für die relative Helligkeit bzw. Dunkelheit des Bilds
+
 ---
 ## Was ist die Segmentierung?
 Einteilen des Bildes in Teilbereiche (Segmente), legt die Objektklassen der Segmente fest und maskiert die Objekte
+
 ### Was ist die Semantische Segmentierung?
 Klassifiziert alle Pixel eines Bildes in sinnvolle Objektklassen.
+
 ### Was ist die Instanz Segmentierung?
+
 Instanz Segmentierung: Identifiziert jede Instanz jedes Objekts in einem Bild
+
 ---
 ## Was ist die Histogrammbasierte Segmentierung?
+
 Graustufenbild wird in zwei Segmente unterteilt schwarz/weiß was dann für Vordergrund (das Objekt) und Hintergrund steht
 ![](images/histogram.png)
+
 ---
 ## Was ist das Schwellenwertverfahren?
 Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahren 
@@ -120,22 +199,27 @@ Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasi
 3. Zwei benachbarte Regionen werden zusammengefasst, wenn sie auch gemeinsam das Homogenitätskriterium erfüllen 
 4. Segmentierung ist beendet, wenn keine zwei Regionen mehr zusammengefasst werden können
 ---
-## Kantenbasiertes Segmentierungsverfahren
+## Kantenbasiertes Segmentierungsverfahren:
+
 Bei der Kantenerkennung wird lediglich versucht, die Bereiche in einem Bild zu finden, in denen sich die Helligkeit oder die Farbe eines Pixelbereiches stark ändert. 
+
 Ein hoher Wert zeigt eine steile Änderung an und ein niedriger Wert zeigt eine flache Änderung an.
+
 ---
+
 ## Kantenerkennung mit Sobel Operator:
 Bei Verwendung der Sobel-Kantenerkennung wird das Bild zuerst separat in X- und Y-Richtung verarbeitet und dann zu einem neuen Bild kombiniert, das die Summe der X- und Y-Kanten des Bildes darstellt.
 
 Ein Kernel ist eine 3 x 3-Matrix, die aus unterschiedlich (oder symmetrisch) gewichteten Indizes besteht. Dies stellt den Filter dar, den wir für eine Kantenerkennung implementieren werden
 RGB -> Grayscale
+
 ---
 ## Region Based Semantic Segmentation:
 „Segmentierung durch Erkennung“-Pipeline
 Schritte:
 * Zufälliges Auswählen von Bereichen innerhalb des Bilds
 * Anwendung von Klassifikation auf diese Bereiche
-* Anhand der Klassifikationsergebnisse werden Vorhersagen für die einzelnenPixel getätigt
+* Anhand der Klassifikationsergebnisse werden Vorhersagen für die einzelnen Pixel getätigt
 
 Segmentierungsergebnisse auf Basis von Ergebnissen der Objekterkennung
 * Selective Search zum finden von möglichen Objekten
@@ -154,7 +238,9 @@ Schichten des Netzwerkes sind nur lokal verbunden
   * „Wo genau ist dieser Bereich zu finden?“
 
 ![](images/fcn.png)
+
 ---
+
 ## SegNet
 * A Deep Convolutional Encoder-Decoder Architecture
 * Unterstützt mehrere Klassen pixelweise zu segmentieren
