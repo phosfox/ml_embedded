@@ -40,6 +40,16 @@ ReLu, Softmax
 
 # Presentation Roeder & Mueller
 ## CNN
+- Gerne für Klassifikationen von Bildern genommen
+  - Erkennung von bspw. Objekten und Gesichtern, ... 
+
+[![CNN](images/CNN.jpeg)](https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148)
+
+- Unter Convolution versteht man hier das Zusammenfassen von Features des Input Bildes
+- Dabei wird die Beziehung zwischen den Pixeln beibehalten
+  - Geschieht, da die Image Features **"gelernt"** werden
+  - Dazu wird der Kernel verwendet
+
 ---
 ## Kernel
 [![Kernel-Gif](images/CNN-Kernel.gif)](https://i.stack.imgur.com/9Iu89.gif)
