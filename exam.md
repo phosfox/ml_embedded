@@ -189,11 +189,11 @@ Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahr
 * vollständiges Verfahren: Jedes Pixel wird zwingend einem Segment zugeordnet
 Richtigen Schwellenwert wählen ist schwer. Zu niedrig werden zu viele Pixel weiß. Zu hoch und es werden zu viele Pixel schwarz.
 ---
-## Gibt noch Graphenbasierte Segmentierungsverfahren:
+## Gibt noch Graphenbasierte Segmentierungsverfahren
 * Random Walker
 ![](images/random-walker.png)
 ---
-## Regionbasierte Segmentierungsverfahren:
+## Regionbasierte Segmentierungsverfahren
 Es gibt also eine Homogenitätskriterium die bestimmt ob zwei benachbarte Pixel zusammenpassen oder nicht und anhand dessen wird das gesamte Bild segmentiert.
 ### Region Merging
 Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasierten Segmentierung gehört
@@ -223,14 +223,36 @@ RGB -> Grayscale
 Schritte:
 * Zufälliges Auswählen von Bereichen innerhalb des Bilds
 * Anwendung von Klassifikation auf diese Bereiche
-* Anhand der Klassifikationsergebnisse werden Vorhersagen für die einzelnenPixel getätigt
+* Anhand der Klassifikationsergebnisse werden Vorhersagen für die einzelnen Pixel getätigt
 
 Segmentierungsergebnisse auf Basis von Ergebnissen der Objekterkennung
 * Selective Search zum finden von möglichen Objekten
 * Gefundene Objekte durch ein CNN (Convolutional Neural Network) nach Eigenschaften durchsuchen
 * Klassifizierung jedes Bereichs mittels einer klassenspezifischen linearen Support Vector Machine
 ---
+## Fully Convolutional Network
+![](images/fcnn.png)
+Schichten des Netzwerkes sind nur lokal verbunden
+* Anders als bei CNNs fehlt der Dense-Layer
+* Weniger Parameter nötig, daher schnellere Bearbeitung
+* Für ein Ergebnis werden zwei Teile benötigt:
+  * Downsampling-Pfad: Erfassung semantischer/kontextbezogener Informationen
+  * „Was ist in dem Bereich zu finden?“
+  * Upsampling-Pfad: Wiederherstellung von räumlichen Informationen
+  * „Wo genau ist dieser Bereich zu finden?“
 
+![](images/fcn.png)
+
+---
+
+## SegNet
+* A Deep Convolutional Encoder-Decoder Architecture
+* Unterstützt mehrere Klassen pixelweise zu segmentieren
+* Basierend auf FCN
+* Entwickelt von Mitgliedern der „Computer Vision and Robotics Group“ der Universität Cambridge
+* Eingabe: RGB-Bild
+* Ausgabe: Ausgabebild mit segmentierten Klassen
+---
 # Presentation Nunn & Awerjanow
 
 ## 5 Essentials for Reinforcement Learning
