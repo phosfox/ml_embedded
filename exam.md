@@ -106,11 +106,11 @@ Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahr
 * vollständiges Verfahren: Jedes Pixel wird zwingend einem Segment zugeordnet
 Richtigen Schwellenwert wählen ist schwer. Zu niedrig werden zu viele Pixel weiß. Zu hoch und es werden zu viele Pixel schwarz.
 ---
-## Gibt noch Graphenbasierte Segmentierungsverfahren:
+## Gibt noch Graphenbasierte Segmentierungsverfahren
 * Random Walker
 ![](images/random-walker.png)
 ---
-## Regionbasierte Segmentierungsverfahren:
+## Regionbasierte Segmentierungsverfahren
 Es gibt also eine Homogenitätskriterium die bestimmt ob zwei benachbarte Pixel zusammenpassen oder nicht und anhand dessen wird das gesamte Bild segmentiert.
 ### Region Merging
 Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasierten Segmentierung gehört
@@ -120,7 +120,7 @@ Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasi
 3. Zwei benachbarte Regionen werden zusammengefasst, wenn sie auch gemeinsam das Homogenitätskriterium erfüllen 
 4. Segmentierung ist beendet, wenn keine zwei Regionen mehr zusammengefasst werden können
 ---
-## Kantenbasiertes Segmentierungsverfahren:
+## Kantenbasiertes Segmentierungsverfahren
 Bei der Kantenerkennung wird lediglich versucht, die Bereiche in einem Bild zu finden, in denen sich die Helligkeit oder die Farbe eines Pixelbereiches stark ändert. 
 Ein hoher Wert zeigt eine steile Änderung an und ein niedriger Wert zeigt eine flache Änderung an.
 ---
@@ -142,7 +142,27 @@ Segmentierungsergebnisse auf Basis von Ergebnissen der Objekterkennung
 * Gefundene Objekte durch ein CNN (Convolutional Neural Network) nach Eigenschaften durchsuchen
 * Klassifizierung jedes Bereichs mittels einer klassenspezifischen linearen Support Vector Machine
 ---
+## Fully Convolutional Network
+![](images/fcnn.png)
+Schichten des Netzwerkes sind nur lokal verbunden
+* Anders als bei CNNs fehlt der Dense-Layer
+* Weniger Parameter nötig, daher schnellere Bearbeitung
+* Für ein Ergebnis werden zwei Teile benötigt:
+  * Downsampling-Pfad: Erfassung semantischer/kontextbezogener Informationen
+  * „Was ist in dem Bereich zu finden?“
+  * Upsampling-Pfad: Wiederherstellung von räumlichen Informationen
+  * „Wo genau ist dieser Bereich zu finden?“
 
+![](images/fcn.png)
+---
+## SegNet
+* A Deep Convolutional Encoder-Decoder Architecture
+* Unterstützt mehrere Klassen pixelweise zu segmentieren
+* Basierend auf FCN
+* Entwickelt von Mitgliedern der „Computer Vision and Robotics Group“ der Universität Cambridge
+* Eingabe: RGB-Bild
+* Ausgabe: Ausgabebild mit segmentierten Klassen
+---
 # Presentation Nunn & Awerjanow
 
 ## 5 Essentials for Reinforcement Learning
