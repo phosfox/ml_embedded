@@ -168,6 +168,10 @@ Neuronen
 ## Adversarial Attacks / One Pixel-Attack
 Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein NN zu täuschen.
 
+> [Adversarial](https://openai.com/blog/adversarial-example-research/) examples are inputs to machine learning models that an attacker has intentionally designed to cause the model to make a mistake; they’re like optical illusions for machines
+
+[![Adversarial](images/adversarial.png)](https://openai.com/content/images/2017/02/adversarial_img_1.pngf)
+
 ![](images/One-Pixel.png)
 
 ### Schutzmöglichkeiten
