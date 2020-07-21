@@ -1,5 +1,30 @@
 # List of things to know
-
+## Was könnten die Gründe für den jetztigen ML Hype sein?
+## Was sind mögliche Probleme bei ML Applikationen?
+- Erklärbarkeit
+- Reproduzierbarkeit und Korrektheit
+- Security, Privacy
+## Was ist ein Neuron?
+## Was ist die Sigmoid Funktion und wozu dient sie?
+## Was sind Activation Functions? Beispiele!
+ReLu, Softmax
+## Was für Learning Kategorien gibt es?
+* Supervised
+* Unsupervised
+* Semisupervised
+* Reinforcement
+## Was ist ein Tensor?
+## Was ist Forwardpropagation?
+## Was ist eine Loss Function?
+## Was ist Gradient Descent?
+## Was ist Backwardpropagation?
+## Warum kann ML auf emb. Devices zu Problemen führen?
+## Was ist ResNet?
+## Was ist ein Residuum?
+## Was ist der Identity Shortcut?
+## Was ist Klassifikation?
+## Was ist Regression? 
+## Was ist der ArcTan2?
 # Our presentation
 ---
 ## Learning Categories
@@ -115,6 +140,7 @@ Trennfläche zwischen den Klassen (Rot und Blau) mit maximalem Abstand zu Objekt
 - Genauer als YOLO, da es mehr Zwischenlagen/Zwischenschritte hat
   
 &rarr; Gute Genauigkeit bei moderater Geschwindigkeit
+
 ---
 ## Transfer Learning
 > [Transfer learning](https://machinelearningmastery.com/transfer-learning-for-deep-learning/) is a machine learning technique where a model trained on one task is re-purposed on a second related task.
