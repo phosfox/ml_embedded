@@ -1,11 +1,34 @@
 # List of things to know
 ## Was könnten die Gründe für den jetztigen ML Hype sein?
+- Die Menge an kreierten Daten ist in den letzten Jahrzenten immens gestiegen
+- Daten werden diesbezüglich auch oft als das "neue Öl" bezeichnet
+- Machine Learning benötigt extrem viele Daten
+---
+
 ## Was sind mögliche Probleme bei ML Applikationen?
 - Erklärbarkeit
 - Reproduzierbarkeit und Korrektheit
 - Security, Privacy
-## Was ist ein Neuron?
+---
+
+## Was ist ein Perceptron?
+- Eine Art künstlichen Neurons
+- Es bestitzt immer genau einen Output (0 oder 1), kann aber mehrere Inputs haben
+- Jeder Input besitzt eine **Gewichtung** &rarr; Sie sagt aus, wie wichtig der Input ist
+---
+
+## Was ist ein Sigmoid Neuron?
+- Modifiziertes Perceptron
+  - Kleine Änderungen der Gewichte und des Bias haben nur kleine Auswirkungen auf den Output
+- Input/Output können **zwischen** 0 und 1 geben
+- Der Output wird über die Sigmoidfunktion berechnet
+  - Activation Funktion
+---
+
 ## Was ist die Sigmoid Funktion und wozu dient sie?
+- Ist eine Activation Funktion
+---
+
 ## Was sind Activation Functions? Beispiele!
 ReLu, Softmax
 ## Was für Learning Kategorien gibt es?
@@ -13,7 +36,15 @@ ReLu, Softmax
 * Unsupervised
 * Semisupervised
 * Reinforcement
+---
+
 ## Was ist ein Tensor?
+Kommt von lat. **tendere** &rarr; **strecken**
+- Ist eine Datenstruktur
+  - Vergleichbar mit Arrays
+- Kann verschiedene Dimensionen haben
+---
+
 ## Was ist Forwardpropagation?
 ## Was ist eine Loss Function?
 ## Was ist Gradient Descent?
@@ -22,11 +53,31 @@ ReLu, Softmax
 ## Warum kann ML auf emb. Devices zu Problemen führen?
 ## Was ist ResNet?
 ## Was ist ein Residuum?
+- Ein Fehler bei einem Ergebnis
+  - Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2
+&rarr; Was man **addieren** muss um auf den tatsächlichen Wert zu gelangen
+---
+
 ## Was ist der Identity Shortcut?
 ## Was ist Klassifikation?
-## Was ist Regression? 
-## Was ist der ArcTan2?
+- Der Output bei einer Klassifikation ist eine Kategorie
+  - "Rot", "Blau"; "Links", "Rechts"
+  - Schrifterkennung, Gesichtserkennung, Objekterkennung
+---
 
+## Was ist Regression? 
+- Output ist ein realer Wert
+  - Bsp: 3.14€; 250Kg
+  - Grundstückspreise, Verkaufszahlen
+  ---
+
+## Was ist der ArcTan2?
+> arctan2(y, x)
+- Erweiterung des Arkustangens
+- Input sind zwei reelle Zahlen *y* und *x*
+- Output
+  - Über alle vier Quadranten
+  - In Rad
 
 
 # Our presentation
