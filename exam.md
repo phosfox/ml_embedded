@@ -12,6 +12,9 @@
 ## Kernel
 ## CNN Pooling Layer
 ## CNN-Dense / Fully Connected Layer
+Fully/Dense Layer bedeutet eigentlich nur, dass die Weights wie die Elemente in einer Matrix sind und das damit der Input Vektor zum Output Vektor transformiert ist. Jedes Input Neuron ist mit jedem Output Neuron Verbunden.
+
+Bei einem Convolutional Layer sind die "Weights" dann ganze Filter/Convolutions und der Output eine neue Repräsentation des Inputs.
 ## R-CNN
 ## Fast R-CNN
 ## Faster R-CNN
