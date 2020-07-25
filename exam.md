@@ -110,6 +110,8 @@ Kommt von lat. **tendere** &rarr; **strecken**
 > In such methods, each of the neural network's weights receive an update proportional to the partial derivative of the error function with respect to the current weight in each iteration of training. 
 > The problem is that in some cases, the gradient will be vanishingly small, effectively preventing the weight from changing its value.
 > In the worst case, this may completely stop the neural network from further training.
+
+Rectifier Funktionen wie ReLu leiden weniger unter dem Vanishing Gradient Problem, weil sie nur ein eine Richtung "minimieren".
 ---
 
 ## Was ist der Identity Shortcut?
