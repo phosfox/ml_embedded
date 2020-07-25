@@ -30,12 +30,38 @@
 ---
 
 ## Was sind Activation Functions? Beispiele!
-ReLu, Softmax
+- [Ist die Funktion](https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0), die angibt, ob/ wie stark ein Neuron feuern soll
+- Beispiele: 
+  - ReLu, Softmax
+---
+
 ## Was für Learning Kategorien gibt es?
 * Supervised
-* Unsupervised
+  * Erfordert ein labeled Datenset
+  * Vorhersage des Modells wird mit dem Label des Datensets verglichen 
+    * Das Netzwerk lernt daraus
+  * Genutzt bei
+    * Klassifikation
+    * Regression
+* Unsupervised 
+  * Hat keine gelabelten Daten
+    * Kein richtig oder falsch
+  * Algorithmus modelliert die Struktur der Daten
+    * Er **entdeckt** und **präsentiert**
+  * Genutzt bei
+    * Clustering (Social Medie &rarr; Personen die du vielleicht kennst)
+    * Assoziierung (Beziehungen der Daten)
 * Semisupervised
+  * Daten besitzen nur teilweise ein Label
+  * Anhand der labeled Daten werden die Daten, die kein Label haben, predicted
+  * Daten werden dann wieder eingespeißt
 * Reinforcement
+  * Agent (AI) soll Ziele erfüllen
+  * Belohnung und Bestrafung
+    * Bewertung der ausgeführten Aktion des Agenten
+  * Agent will die Belohnung maximieren
+  * Belohnungspolitik muss festgelegt werden
+  * Agent führt zufällige Aktionen aus und lernt anhand der Belohnungen/Strafen
 ---
 
 ## Was ist ein Tensor?
