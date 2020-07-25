@@ -192,6 +192,15 @@ Das Summenzeichen ist eine elementweise Summe
 ## CNN - Convolutional Neural Network
 - Gerne für Klassifikationen von Bildern genommen
   - Erkennung von bspw. Objekten und Gesichtern, ... 
+- Training ist überwacht
+- Aufbau ist abwechselnd wiederholende Filter (Convolutional Layer) und Aggregations-Schichten (Pooling-Layer)
+  - Filter haben je nach Ebene eine unterschiedliche "aktivierung"
+    - 1. Aktivierung von einfachen Strukturen (Linien, Kanten)
+    - 2. Lernen von Strukturen, die aus Kombination der Basis-Strukturen entsteht (Kurven, einfache Formen)
+    - Jede Filterebene **erhöht das Abstraktions-Level**
+- Am Ende eine/mehrere Schichten aus "normalen" vollständig verbundenen Neuronen &rarr; Dense/Fully Connected Layer
+
+&rarr; Kann Objekte unabhängig von deren Position im Bild erkennen
 
 [![CNN](images/CNN.jpeg)](https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148)
 
