@@ -7,8 +7,14 @@
 
 ## Was sind mögliche Probleme bei ML Applikationen?
 - Erklärbarkeit
+  - Für den Einsatz der KI bei der Strafverfolgung, Finanzdienstleistungen etc. wird es wichtig zu wissen, wo die KI falsch liegen könnte und wie sie zu diesem Ergebnis gekommen ist.
 - Reproduzierbarkeit und Korrektheit
-- Security, Privacy
+  - Maschinelles Lernen muss reproduzierbar und deterministisch sein, damit es in lebenskritischen Systemen wie autonomes Fahren, Gesundheitsführsorge eingesetzt werden kann
+- Security
+  - KI dringt in immer mehr Bereiche eines Unternehmens ein
+  - Dadurch ist die Sicherheit zu einem Problem geworden
+- Privacy
+  - Gesichtserkennung, etc.
 ---
 
 ## Was ist ein Perceptron?
@@ -205,6 +211,7 @@ Das Summenzeichen ist eine elementweise Summe
   - Reduktion der Parameter eines Netzes
 
 Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl reduziert.
+
 ![](images/Pooling-Layer.png)
 ---
 ## CNN-Dense / Fully Connected Layer
