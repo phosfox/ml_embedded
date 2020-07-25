@@ -226,10 +226,13 @@ Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl
 
 ![](images/Pooling-Layer.png)
 ---
+
 ## CNN-Dense / Fully Connected Layer
 Fully/Dense Layer bedeutet eigentlich nur, dass die Weights wie die Elemente in einer Matrix sind und das damit der Input Vektor zum Output Vektor transformiert ist. Jedes Input Neuron ist mit jedem Output Neuron Verbunden.
 
 Bei einem Convolutional Layer sind die "Weights" dann ganze Filter/Convolutions und der Output eine neue Repräsentation des Inputs.
+---
+
 ## R-CNN
 > [Dense und Fully Connected](https://forums.fast.ai/t/dense-vs-convolutional-vs-fully-connected-layers/191) bedeutet das selbe
 >-Jeremy Howard
@@ -342,7 +345,7 @@ Neuronen
   - Wenige 
     - Underfitting (Komplexe Daten nicht abbildbar)
   - Viele Neuronen
-    - Nicht alle Neuronen können gut angelernt weredn
+    - Nicht alle Neuronen können gut angelernt werden
       - Informationen der Trainingsdaten nicht ausreichend
     - Hohe Trainingsdauer
 
@@ -371,19 +374,85 @@ Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein
 ---
 
 # Presentation Frieß & Schaebler
+## Was ist eine Szene?
+- Objekte, die als Bildquelle dienen (z.B. durch Fotografie)
+---
+
+## Was ist eine Bildaufnahme?
+- Digitalfoto
+- Scan eines Fotos
+- Rontgen
+- Radarbild
+
+---
+
+## Was ist die Grauwert-Transformation?
+Wichtiger erster Schritt für fast alle Segmentierungsalgorithmen, bei der man eine Reduktion der 3 $\times$ 8 Bit Grauwerte vornimmt, damit nur noch eine Farbinformation für die Berechnungen vorhanden ist
+
+--- 
+
+## Was ist die ungewichtete Luminanzmethode?
+- Mittelwert eines Pixels
+  
+$((R + G + B) / 3)$
+
+---
+
+## Was ist die gewichtete Luminanzmethode?
+- Summe der Werte R, G und B in deren Verhältnis
+
+$((0.3 * R) + (0.59 * G) + (0.11 * B))$
+
+---
+
+
 ## Was ist der Kontrast?
 Unterschied zwischen hellen und dunklen Bildbereichen
+
+- Hoher Kontrast
+  - Viele helle und dunkle Helligkeitsbereiche
+  - Unterschied helle/dunkle Helligkeiten ist hoch
+- Niedrig
+  - Viele mittlere Helligkeitsbereiche
+  - Unterschied helle/dunkle Helligkeiten ist gering
 
 ---
 ## Was ist Gamma?
 Gamma ist ein Wert für die relative Helligkeit bzw. Dunkelheit des Bilds
 
 ---
+
+## Was ist eine Helligkeitskorrektur?
+- Veränderung eines jeden Pixels (Wert aufaddiert)
+- Problem
+  - Helle Pixel werden noch heller und können so "verschwinden"
+
+---
+
+## Was ist YCbCr?
+
+- Ein Farbraum
+
+Grundhelligkeit (Helligkeitsverteilung von schwarz über grau bis weiß) Y und die beiden Farbkomponenten Cb (Blue-Yellow Chrominance) und Cr (Red-Green Chrominance)
+
+---
+
+## Welchen Vorteil bietet YCbCr gegenüber RGB?
+
+RGB sind die drei Farben miteinander in **Zusammenhang** und nicht separat wie bei YCbCr.
+Bei YCbCr kann man also den Graustufenbereich betrachten und hat trotzdem noch die Informationen über die Farbwerte. Wenn man RGB in Graustufen umwandelt hat man keine Information mehr über die Farbwerte.
+
+---
+
 ## Was ist die Segmentierung?
 Einteilen des Bildes in Teilbereiche (Segmente), legt die Objektklassen der Segmente fest und maskiert die Objekte
 
+---
+
 ### Was ist die Semantische Segmentierung?
 Klassifiziert alle Pixel eines Bildes in sinnvolle Objektklassen.
+
+---
 
 ### Was ist die Instanz Segmentierung?
 
@@ -405,6 +474,7 @@ Richtigen Schwellenwert wählen ist schwer. Zu niedrig werden zu viele Pixel wei
 ## Gibt noch Graphenbasierte Segmentierungsverfahren
 * Random Walker
 ![](images/random-walker.png)
+
 ---
 ## Regionbasierte Segmentierungsverfahren
 Es gibt also eine Homogenitätskriterium die bestimmt ob zwei benachbarte Pixel zusammenpassen oder nicht und anhand dessen wird das gesamte Bild segmentiert.
