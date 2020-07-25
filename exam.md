@@ -111,7 +111,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Ist das eigentliche Lernen des Netzwerkes, da dort die weights und biase des Netzes angepasst werden
 * Die Erkenntnisse der Loss Function und des Gradient Descent werden dann wieder Rückwärts durch das Netz gegeben
 * Dadurch können dann die Weights und Biases der einzelnen Neuronen unterschiedlich angepasst werden
-* Im Bild kann sehen wie die Informationen erst vorwärts und dann rückwärts durch das Netz geschickt werden
+* Im Bild kann man sehen wie die Informationen erst vorwärts und dann rückwärts durch das Netz geschickt werden
   
 ![Backpropagation](images/backprop.gif)
 ---
