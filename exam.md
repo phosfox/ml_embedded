@@ -161,20 +161,6 @@ Rectifier Funktionen wie ReLu leiden weniger unter dem Vanishing Gradient Proble
   - Über alle vier Quadranten
   - In Rad
 
-
-# Our presentation
----
-## Learning Categories
----
-## ResNet
----
-## Forward Propagation
----
-## Backward Propagation
----
-## Our Implementations
----
-
 # Presentation Roeder & Mueller
 ## CNN - Convolutional Neural Network
 - Gerne für Klassifikationen von Bildern genommen
