@@ -123,7 +123,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Residual = Residuum
 * Residuum ist in der Mathematik der Fehler bei einem Ergebnis:
   * Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2, wenn man sie auf 21 schätzt, wäre das Residuum -3. Also wie viel man addieren muss um auf den tatsächlichen Wert zu gelangen
-* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” —Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
+* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” — Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
 * Deep NNs haben eine höhere Errorrate als Flachere NNs
 * Lösung sind Identity Shortcuts,
   * Die Identity Function gibt immer das zurück was reingegeben wird
@@ -146,6 +146,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
 > In the worst case, this may completely stop the neural network from further training.
 
 Rectifier Funktionen wie ReLu leiden weniger unter dem Vanishing Gradient Problem, weil sie nur ein eine Richtung "minimieren".
+
 ---
 
 ## Was ist der Identity Shortcut?
