@@ -78,6 +78,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Anhand dessen wird dann berechnet wie stark oder ob das Neuron aktiviert wird
 * Input ist bspw. die 7 und es soll die 7 predicted werden
 * Verifiziert wird der Output des Netzes durch die Loss function
+  
 ![Forwardpropagation](images/forwardprop.gif)
 ---
 ## Was ist eine Loss Function?
@@ -88,6 +89,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Das Ziel des NNs ist es also den Verlust möglichst zu minimieren
 * Anhand des Verlusts kann dann festgestellt werden wie die Weights und Biases angepasst werden müssen, das geschieht dann über Gradient Descent
 * Hier Beispiel von Mean Squared Error
+
 ![Loss-Function](images/loss.png)
 ---
 ## Was ist Gradient Descent?
@@ -101,6 +103,7 @@ Kommt von lat. **tendere** &rarr; **strecken**
   * Die Richtung in die man gehen muss liefert der Gradient Descent
   * Der Gradient Descent geht in die Richtung des steilsten Abstiegs mit negativen Gradienten 
   * An jedem Punkt wird der nächste steilste Abstieg neu berechnet!
+  
 ![Gradien-Descent](images/gradient.jpg)
 ---
 ## Was ist Backwardpropagation?
@@ -108,7 +111,8 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Ist das eigentliche Lernen des Netzwerkes, da dort die weights und biase des Netzes angepasst werden
 * Die Erkenntnisse der Loss Function und des Gradient Descent werden dann wieder Rückwärts durch das Netz gegeben
 * Dadurch können dann die Weights und Biases der einzelnen Neuronen unterschiedlich angepasst werden
-* Im Bild kann sehen wie die Informationen erst vorwärts und dann rückwärts durch das Netz geschickt werden
+* Im Bild kann man sehen wie die Informationen erst vorwärts und dann rückwärts durch das Netz geschickt werden
+  
 ![Backpropagation](images/backprop.gif)
 ---
 ## Warum kann ML auf emb. Devices zu Problemen führen?
@@ -119,17 +123,21 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Residual = Residuum
 * Residuum ist in der Mathematik der Fehler bei einem Ergebnis:
   * Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2, wenn man sie auf 21 schätzt, wäre das Residuum -3. Also wie viel man addieren muss um auf den tatsächlichen Wert zu gelangen
-* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” —Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
+* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” — Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
 * Deep NNs haben eine höhere Errorrate als Flachere NNs
 * Lösung sind Identity Shortcuts,
   * Die Identity Function gibt immer das zurück was reingegeben wird
   * Identity Kopiert einfach nur den input
   * Ermöglicht das trainieren von "*tieferen*" (Deeper) Neuronalen Netzen als zuvor
+
 ![Identity-Shortcut](images/identity.png)
+--- 
 ## Was ist ein Residuum?
 - Ein Fehler bei einem Ergebnis
   - Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2
 &rarr; Was man **addieren** muss um auf den tatsächlichen Wert zu gelangen
+---
+
 ## Was ist ein sog. vanishing Gradient?
 * Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” —Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
 > In machine learning, the vanishing gradient problem is encountered when training artificial neural networks with gradient-based learning methods and backpropagation. 
@@ -138,9 +146,19 @@ Kommt von lat. **tendere** &rarr; **strecken**
 > In the worst case, this may completely stop the neural network from further training.
 
 Rectifier Funktionen wie ReLu leiden weniger unter dem Vanishing Gradient Problem, weil sie nur ein eine Richtung "minimieren".
+
 ---
 
 ## Was ist der Identity Shortcut?
+- Löst das Problem des *vanishing Gradient* 
+- Identity Funktion gibt immer das zurück was reingegeben wird
+  - Identity **kopiert** den Input
+  
+
+Das Summenzeichen ist eine elementweise Summe
+
+![](images/Identity_Shortcut.png)
+---
 ## Was ist Klassifikation?
 - Der Output bei einer Klassifikation ist eine Kategorie
   - "Rot", "Blau"; "Links", "Rechts"
