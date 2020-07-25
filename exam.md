@@ -167,12 +167,17 @@ Beispiel:
 ![](images/RNN-Beispiel.png)
 
 #### Support Vector Machine
-- Verfahren zur Unterteilung einer Menge von Objekten in Klassen
+- [Verfahren zur Unterteilung einer Menge von Objekten in Klassen](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47)
 
 Beispiel:
-Trennfläche zwischen den Klassen (Rot und Blau) mit maximalem Abstand zu Objekten im Vektorraum einpassen 
+- Trennfläche zwischen den Klassen (Grün und Blau) mit maximalem Abstand zu Objekten im Vektorraum einpassen 
+- Durch das Maximieren der Distanz zwischen den Klassen hat zur Folge, dass zukünftige Daten mit einer höheren Konfidenz klassifiziert werden können
 
-![](images/Support-Vector-Machine.png)
+[![Margin](images/Support-Vector_Margin.jpg)](https://miro.medium.com/max/700/0*ecA4Ls8kBYSM5nza.jpg)
+
+- Die Funktion die eingepasst wird ist bei zwei Klassen eine Linie
+- Kann sich bei mehr Klassen allerdings verändern
+  - Kurven
 
 ---
 ## Fast R-CNN
