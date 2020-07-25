@@ -219,6 +219,7 @@ Das Summenzeichen ist eine elementweise Summe
   - Reduktion der Parameter eines Netzes
 
 Hier: 4 Matrix Ergebnisse aus einem 2 $\times$ 2-Kernel werden auf **eine** Zahl reduziert.
+
 ![](images/Pooling-Layer.png)
 ---
 ## CNN-Dense / Fully Connected Layer
