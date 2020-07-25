@@ -150,6 +150,15 @@ Rectifier Funktionen wie ReLu leiden weniger unter dem Vanishing Gradient Proble
 ---
 
 ## Was ist der Identity Shortcut?
+- Löst das Problem des *vanishing Gradient* 
+- Identity Funktion gibt immer das zurück was reingegeben wird
+  - Identity **kopiert** den Input
+  
+
+Das Summenzeichen ist eine elementweise Summe
+
+![](images/Identity_Shortcut.png)
+---
 ## Was ist Klassifikation?
 - Der Output bei einer Klassifikation ist eine Kategorie
   - "Rot", "Blau"; "Links", "Rechts"
