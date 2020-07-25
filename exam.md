@@ -46,16 +46,70 @@ Kommt von lat. **tendere** &rarr; **strecken**
 ---
 
 ## Was ist Forwardpropagation?
+* Input wird durch die Layer des Netzes geschickt
+* Am Ende wird eine Vorhersage getroffen
+* An jedem Neuron werden alle Ausgaben der Vorgänger zusammen in die Activationfunction gegeben
+* Anhand dessen wird dann berechnet wie stark oder ob das Neuron aktiviert wird
+* Input ist bspw. die 7 und es soll die 7 predicted werden
+* Verifiziert wird der Output des Netzes durch die Loss function
+![Forwardpropagation](images/forwardprop.gif)
+---
 ## Was ist eine Loss Function?
+* **Loss** bzw. **Error** ist der Unterschied zwischen Ausgabewert des NN und dem tatsächlichen Wert
+* Dieser Wert zeigt ob das NN für ein Input gut oder schlecht gearbeitet hat
+* Je größer der Loss/Verlust, desto schlechter hat das Netz gearbeitet
+* Je kleiner desto besser
+* Das Ziel des NNs ist es also den Verlust möglichst zu minimieren
+* Anhand des Verlusts kann dann festgestellt werden wie die Weights und Biases angepasst werden müssen, das geschieht dann über Gradient Descent
+* Hier Beispiel von Mean Squared Error
+![Loss-Function](images/loss.png)
+---
 ## Was ist Gradient Descent?
-## Was ist ein sog. vanishing gradient?
+* Optimizer:
+  * Lern prozess ist letztendlich ein großes Optimierungs problem, bei dem die Gewichte und Biase angepasst werden müssen
+    * Müssen so angepasst werden, dass die Loss function minimiert wird
+  * Die Gewichte und Biase können z.B. durch iterative Algorithmen optimiert werden
+* Gradient Descent (Gradienten Abstieg):
+  * Man kann sich das Netz wie eine Funktion vorstellen
+  * Man möchte quasi von einer zufälligen Position zum Minimum der Funktion kommen
+  * Die Richtung in die man gehen muss liefert der Gradient Descent
+  * Der Gradient Descent geht in die Richtung des steilsten Abstiegs mit negativen Gradienten 
+  * An jedem Punkt wird der nächste steilste Abstieg neu berechnet!
+![Gradien-Descent](images/gradient.jpg)
+---
 ## Was ist Backwardpropagation?
+* Methode, um die weights und biases der Neuronen anzupassen
+* Ist das eigentliche Lernen des Netzwerkes, da dort die weights und biase des Netzes angepasst werden
+* Die Erkenntnisse der Loss Function und des Gradient Descent werden dann wieder Rückwärts durch das Netz gegeben
+* Dadurch können dann die Weights und Biases der einzelnen Neuronen unterschiedlich angepasst werden
+* Im Bild kann sehen wie die Informationen erst vorwärts und dann rückwärts durch das Netz geschickt werden
+![Backpropagation](images/backprop.gif)
+---
 ## Warum kann ML auf emb. Devices zu Problemen führen?
+---
 ## Was ist ResNet?
+**Deep Residual Neural Network**
+* Deep bedeutet einfach dass es mehrere hidden Layer besitzt
+* Residual = Residuum
+* Residuum ist in der Mathematik der Fehler bei einem Ergebnis:
+  * Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2, wenn man sie auf 21 schätzt, wäre das Residuum -3. Also wie viel man addieren muss um auf den tatsächlichen Wert zu gelangen
+* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” —Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
+* Deep NNs haben eine höhere Errorrate als Flachere NNs
+* Lösung sind Identity Shortcuts,
+  * Die Identity Function gibt immer das zurück was reingegeben wird
+  * Identity Kopiert einfach nur den input
+  * Ermöglicht das trainieren von "*tieferen*" (Deeper) Neuronalen Netzen als zuvor
+![Identity-Shortcut](images/identity.png)
 ## Was ist ein Residuum?
 - Ein Fehler bei einem Ergebnis
   - Wenn man zb das Alter einer Person schätzen soll und man sie auf 16 schätzt, sie aber 18 ist, dann ist das Residuum 2
 &rarr; Was man **addieren** muss um auf den tatsächlichen Wert zu gelangen
+## Was ist ein sog. vanishing Gradient?
+* Deep NNs sind schwer zu trainieren aufgrund des “Vanishing gradient problem” —Problem des verschwindenden Gradienten - wenn der Gradient zu früheren Schichten zurückgegeben wird, kann das wiederholte Multiplizieren den Gradienten verschwindend klein machen	
+> In machine learning, the vanishing gradient problem is encountered when training artificial neural networks with gradient-based learning methods and backpropagation. 
+> In such methods, each of the neural network's weights receive an update proportional to the partial derivative of the error function with respect to the current weight in each iteration of training. 
+> The problem is that in some cases, the gradient will be vanishingly small, effectively preventing the weight from changing its value.
+> In the worst case, this may completely stop the neural network from further training.
 ---
 
 ## Was ist der Identity Shortcut?
