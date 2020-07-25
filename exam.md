@@ -86,6 +86,9 @@ Kommt von lat. **tendere** &rarr; **strecken**
 * Verifiziert wird der Output des Netzes durch die Loss function
   
 ![Forwardpropagation](images/forwardprop.gif)
+
+Hier noch ein einfaches NN in Matrixrepräsentation:
+![](images/matrix.png)
 ---
 ## Was ist eine Loss Function?
 * **Loss** bzw. **Error** ist der Unterschied zwischen Ausgabewert des NN und dem tatsächlichen Wert
