@@ -471,13 +471,16 @@ Schwellenwertverfahren =  pixelorientiertes vollständiges Segmentierungsverfahr
 * vollständiges Verfahren: Jedes Pixel wird zwingend einem Segment zugeordnet
 Richtigen Schwellenwert wählen ist schwer. Zu niedrig werden zu viele Pixel weiß. Zu hoch und es werden zu viele Pixel schwarz.
 ---
-## Gibt noch Graphenbasierte Segmentierungsverfahren
+## Gibt noch Graphenbasierte Segmentierungsverfahren - Random Walker
 * Random Walker
 ![](images/random-walker.png)
 
 ---
 ## Regionbasierte Segmentierungsverfahren
 Es gibt also eine Homogenitätskriterium die bestimmt ob zwei benachbarte Pixel zusammenpassen oder nicht und anhand dessen wird das gesamte Bild segmentiert.
+
+---
+
 ### Region Merging
 Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasierten Segmentierung gehört
 ![](images/region-merging.png)
@@ -485,7 +488,9 @@ Region Merging ist ein Segmentierungsalgorithmus der zur Gruppe der Regionenbasi
 2. Festlegen des Homogenitätskriterium (z.B. ein Grauwertunterschied zwischen zwei betrachteten Nachbarn)
 3. Zwei benachbarte Regionen werden zusammengefasst, wenn sie auch gemeinsam das Homogenitätskriterium erfüllen 
 4. Segmentierung ist beendet, wenn keine zwei Regionen mehr zusammengefasst werden können
+
 ---
+
 ## Kantenbasiertes Segmentierungsverfahren:
 
 Bei der Kantenerkennung wird lediglich versucht, die Bereiche in einem Bild zu finden, in denen sich die Helligkeit oder die Farbe eines Pixelbereiches stark ändert. 
@@ -512,16 +517,19 @@ Segmentierungsergebnisse auf Basis von Ergebnissen der Objekterkennung
 * Selective Search zum finden von möglichen Objekten
 * Gefundene Objekte durch ein CNN (Convolutional Neural Network) nach Eigenschaften durchsuchen
 * Klassifizierung jedes Bereichs mittels einer klassenspezifischen linearen Support Vector Machine
+
 ---
+
 ## Fully Convolutional Network
 ![](images/fcnn.png)
+
 Schichten des Netzwerkes sind nur lokal verbunden
 * Anders als bei CNNs fehlt der Dense-Layer
 * Weniger Parameter nötig, daher schnellere Bearbeitung
 * Für ein Ergebnis werden zwei Teile benötigt:
-  * Downsampling-Pfad: Erfassung semantischer/kontextbezogener Informationen
+  * Downsampling-Pfad: Erfassung semantischer/kontextbezogener Informationen
   * „Was ist in dem Bereich zu finden?“
-  * Upsampling-Pfad: Wiederherstellung von räumlichen Informationen
+  * Upsampling-Pfad: Wiederherstellung von räumlichen Informationen
   * „Wo genau ist dieser Bereich zu finden?“
 
 ![](images/fcn.png)
@@ -536,6 +544,7 @@ Schichten des Netzwerkes sind nur lokal verbunden
 * Eingabe: RGB-Bild
 * Ausgabe: Ausgabebild mit segmentierten Klassen
 ---
+
 # Presentation Nunn & Awerjanow
 
 ## 5 Essentials for Reinforcement Learning
@@ -596,6 +605,7 @@ Schichten des Netzwerkes sind nur lokal verbunden
   - Exploration nutzt unbekannte Wege um neues zu Erkunden
 
 &rarr; Es sollte immer ein zwischending aus Exploitation und Exploration geben, damit die Policy verbessert wird
+
 ---
 
 ## Limitations of Reinforcement Learning
