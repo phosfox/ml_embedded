@@ -381,7 +381,7 @@ Es ist möglich mit einem eingefügten Pixel (der geschickt platziert wurde) ein
 ## Was ist eine Bildaufnahme?
 - Digitalfoto
 - Scan eines Fotos
-- Rontgen
+- Röntgen
 - Radarbild
 
 ---
