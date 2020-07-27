@@ -313,7 +313,7 @@ Beispiel:
 - Unterteilung des Bildes in Regionen
   - Vorhersagen für Bounding Boxen und Wahrscheinlichkeit jeder Region
 - Nur **ein** Objekt pro Region
-- Vorhersagen werden durch den *globalen Kontext** des Bildes getroffen
+- Vorhersagen werden durch den *globalen Kontext* des Bildes getroffen
 ---
 ## Single Shot Detection
 - Ähnlich wie YOLO
@@ -548,11 +548,11 @@ Schichten des Netzwerkes sind nur lokal verbunden
 # Presentation Nunn & Awerjanow
 
 ## 5 Essentials for Reinforcement Learning
-    - Action
-    - Environment
-    - Reward
-    - State
-    - Agent
+  - Action
+  - Environment
+  - Reward
+  - State
+  - Agent
 ---
 
 ## Markow-Decision problem
